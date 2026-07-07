@@ -38,7 +38,23 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
 5. **Bila butuh literatur pendukung yang belum ada di bibliografi → TANYA
    USER, jangan mengarang dan jangan dibiarkan tanpa dukungan.** Berlaku
    saat menulis klaim, merancang eksperimen, menyusun reasoning, atau
-   mengambil keputusan desain yang butuh dukungan akademis:
+   mengambil keputusan desain yang butuh dukungan akademis — terutama di
+   bagian-bagian padat sitasi berikut:
+   - **Introduction / Latar Belakang:** setiap klaim gap, urgensi, dan
+     motivasi harus bersitasi — ini titik fabrikasi paling rawan.
+   - **Related Work / Tinjauan Pustaka:** positioning tiap kelompok
+     pendekatan, keterbatasannya, dan pesaing terkuat (paper pembanding
+     langsung) — jangan menebak siapa state-of-the-art.
+   - **Methods / Metodologi:** justifikasi pilihan metode, parameter, dan
+     protokol yang mengikuti praktik terdahulu.
+   - **Discussion / Pembahasan:** perbandingan hasil dengan angka penelitian
+     terdahulu dan penjelasan mekanisme yang merujuk teori — angka
+     pembanding dari paper lain WAJIB dari sumber nyata, bukan ingatan.
+   - **Limitations & Future Work:** klaim bahwa suatu masalah "masih
+     terbuka" atau "belum pernah diteliti" justru butuh dukungan pencarian
+     literatur, bukan asumsi.
+
+   Prosedurnya:
    - Kumpulkan kebutuhan literatur menjadi **daftar pertanyaan spesifik**
      untuk dijawab user, per butir memuat: (a) klaim/keputusan apa yang
      perlu didukung dan di bagian mana, (b) jenis sumber yang dibutuhkan
