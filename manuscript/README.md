@@ -55,28 +55,34 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
      literatur, bukan asumsi.
 
    Prosedurnya:
-   - Kumpulkan kebutuhan literatur menjadi **daftar pertanyaan spesifik**
-     untuk dijawab user. **Satu pertanyaan = satu kebutuhan literatur,
-     maksimal ±500 karakter** — komprehensif lewat struktur, bukan panjang.
-     Template per pertanyaan:
+   - Kumpulkan kebutuhan literatur menjadi **daftar pertanyaan terbuka**
+     (kalimat tanya, bukan permintaan satu sitasi) untuk dijawab user.
+     **Satu pertanyaan = satu topik/klaim** agar jawaban fokus, panjang
+     pertanyaan maksimal ±500 karakter; tapi **jawabannya diharapkan berupa
+     penjelasan/sintesis yang disertai referensi — boleh banyak referensi
+     per pertanyaan.** Template per pertanyaan:
      ```text
-     [TODO-CITE-<n>] (<bagian naskah>, <konteks singkat>)
-     Klaim : "<klaim/keputusan yang perlu didukung, kutip persis>"
-     Butuh : <jenis sumber: survey/bukti empiris/metode pembanding>,
-             <venue & rentang tahun, mis. jurnal Q1, 2020–2026>
-     Kandidat [BELUM TERVERIFIKASI]: <author tahun "judul singkat">, bila ada
-     Jawab : DOI, atau judul + tahun
+     [TODO-CITE-<n>] (<bagian naskah>, klaim: "<klaim yang perlu didukung>")
+     Pertanyaan: <kalimat tanya terbuka tentang apa kata literatur —
+                 bagaimana/sejauh mana/dalam kondisi apa/apa bukti ...>
+     Harapan jawaban: penjelasan + referensi pendukung (DOI/judul+tahun,
+                 boleh lebih dari satu; sebutkan venue & tahun bila bisa)
      ```
      Contoh:
      ```text
-     [TODO-CITE-3] (Bab 2, positioning fusi statis)
-     Klaim : "fusi statis tetap kompetitif dibanding fusi adaptif
-             pada klasifikasi EEG lintas-subjek"
-     Butuh : bukti empiris pembanding, jurnal Q1/konferensi A*, 2021–2026
-     Kandidat [BELUM TERVERIFIKASI]: Wu et al. 2023 "Adaptive fusion for
-             cross-subject EEG" (IEEE TNSRE?)
-     Jawab : DOI, atau judul + tahun
+     [TODO-CITE-3] (Bab 2, klaim: "fusi statis tetap kompetitif dibanding
+     fusi adaptif pada klasifikasi EEG lintas-subjek")
+     Pertanyaan: Bagaimana bukti empiris 2021–2026 membandingkan fusi
+     statis vs adaptif pada EEG lintas-subjek, dan dalam kondisi apa
+     masing-masing unggul?
+     Harapan jawaban: penjelasan + referensi (DOI/judul+tahun, boleh banyak).
      ```
+   - **Perlakukan jawaban user sebagai material sintesis**, bukan sekadar
+     daftar sitasi: penjelasan user menjadi bahan reasoning/keputusan/tulisan,
+     lalu (a) SEMUA referensi di dalamnya diverifikasi ke API (aturan 2)
+     sebelum masuk bibliografi, (b) setiap klaim yang diambil dari penjelasan
+     user diatribusikan ke referensi yang tepat di naskah, (c) prosa user
+     ditulis ulang mengikuti aturan gaya (Bagian 4–5), tidak disalin mentah.
    - Ajukan pertanyaan secara **batch** (sekali kumpul di akhir pengerjaan),
      bukan menetes satu-satu. Urutkan dari yang paling menentukan
      (klaim inti/novelty dulu, pelengkap belakangan).
