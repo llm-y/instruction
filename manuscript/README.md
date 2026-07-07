@@ -12,6 +12,7 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
 |--------------|--------------------|
 | Artikel jurnal / conference paper | `README.md` + [`journal.md`](journal.md) |
 | Proposal penelitian / disertasi / tesis | `README.md` + [`proposal.md`](proposal.md) |
+| Laporan penelitian/teknis | `README.md` saja; tambah [`journal.md`](journal.md) bila laporan akan dipublikasikan |
 
 ---
 
@@ -81,22 +82,21 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
      Expected answer: explanation + references (DOI/title+year, multiple
      welcome).
      ```
-   - **Perlakukan jawaban user sebagai material sintesis**, bukan sekadar
-     daftar sitasi: penjelasan user menjadi bahan reasoning/keputusan/tulisan,
-     lalu (a) SEMUA referensi di dalamnya diverifikasi ke API (aturan 2)
-     sebelum masuk bibliografi, (b) setiap klaim yang diambil dari penjelasan
-     user diatribusikan ke referensi yang tepat di naskah, (c) prosa user
-     ditulis ulang mengikuti aturan gaya (Bagian 4–5), tidak disalin mentah.
    - Ajukan pertanyaan secara **batch** (sekali kumpul di akhir pengerjaan),
      bukan menetes satu-satu. Urutkan dari yang paling menentukan
      (klaim inti/novelty dulu, pelengkap belakangan).
-   - Tandai lokasi di naskah dengan penanda sementara (mis.
-     `% TODO-CITE: <pertanyaan>`) agar build tetap jalan dan tidak ada
-     sitasi palsu yang masuk sementara menunggu jawaban.
-   - Jawaban user (judul/DOI/referensi) tetap **WAJIB diverifikasi ke API**
-     (aturan 2) sebelum dipakai — jawaban user bukan pengecualian.
-   - Setelah terjawab, gunakan referensi itu sebagai dasar
-     tulisan/eksperimen/reasoning/keputusan — bukan asumsi tanpa sumber.
+   - Tandai lokasi di naskah dengan penanda sementara ber-ID yang sama
+     dengan pertanyaannya (mis. `% TODO-CITE-3: <ringkasan kebutuhan>`)
+     agar build tetap jalan, tidak ada sitasi palsu yang masuk sementara
+     menunggu jawaban, dan jawaban user mudah dipetakan ke lokasinya.
+   - **Perlakukan jawaban user sebagai material sintesis**, bukan sekadar
+     daftar sitasi: penjelasan user menjadi dasar
+     tulisan/eksperimen/reasoning/keputusan, dengan tiga kewajiban:
+     (a) SEMUA referensi di dalamnya diverifikasi ke API (aturan 2) sebelum
+     masuk bibliografi — jawaban user bukan pengecualian, (b) setiap klaim
+     yang diambil dari penjelasan user diatribusikan ke referensi yang
+     tepat di naskah, (c) prosa user ditulis ulang mengikuti aturan gaya
+     (Bagian 4–5), tidak disalin mentah.
 
 ## 2. Integritas klaim & data — klaim HARUS sesuai bukti (WAJIB)
 
@@ -250,17 +250,32 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
    legend tidak menutupi data, panel bertanda (a), (b), (c) bila multi-panel
    dan dirujuk per-panel di caption.
 
+### Khusus tabel
+
+10. **Gaya tabel publikasi (booktabs):** hanya garis horizontal
+    (`\toprule`/`\midrule`/`\bottomrule`), TANPA garis vertikal dan TANPA
+    garis horizontal di setiap baris. Header jelas, satuan ditulis di
+    header kolom (mis. "Akurasi (%)"), bukan diulang di tiap sel.
+11. **Angka rapi dan jujur:** jumlah desimal konsisten per kolom dan
+    selaras dengan presisi pengukurannya (jangan menulis `62.4137%` bila
+    ketidakpastiannya ±2%), angka rata kanan/rata titik desimal,
+    mean ± SD/CI ditulis dengan format seragam di semua tabel.
+12. **Penanda "terbaik" didefinisikan:** bila memakai bold/underline untuk
+    hasil terbaik/kedua-terbaik, definisikan di caption; penandaan harus
+    dari perbandingan yang benar (metrik & arah yang sama), bukan pilihan
+    manual.
+
 ### De-AI pada gambar
 
-10. **Teks dalam gambar mengikuti aturan de-AI** (Bagian 4–5): tanpa em-dash,
+13. **Teks dalam gambar mengikuti aturan de-AI** (Bagian 4–5): tanpa em-dash,
     tanpa kata promosi, istilah konsisten dengan body text (jangan "training
     accuracy" di gambar tapi "akurasi pelatihan" di teks).
-11. **Dilarang diagram/ilustrasi generatif-AI** (skema "kartun" hasil
+14. **Dilarang diagram/ilustrasi generatif-AI** (skema "kartun" hasil
     text-to-image) untuk diagram metode — buat dengan tool diagram nyata
     (TikZ, draw.io, Inkscape, matplotlib). Banyak jurnal bereputasi melarang
     gambar hasil AI generatif, dan artefaknya (teks rusak, ikon aneh,
     ketidakkonsistenan garis) adalah AI-tell yang kentara.
-12. **Hindari gaya "template AI" pada diagram:** kotak-panah seragam penuh
+15. **Hindari gaya "template AI" pada diagram:** kotak-panah seragam penuh
     gradien dan ikon dekoratif tanpa makna. Setiap elemen visual harus
     membawa informasi; diagram alur metode harus mencerminkan pipeline yang
     BENAR-BENAR dieksekusi (cek terhadap kode, selaras Bagian 2).
@@ -270,7 +285,8 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
 - [ ] Dokumen ter-build bersih: 0 citation undefined, 0 error bibliografi.
 - [ ] Semua entri bibliografi terverifikasi API (CrossRef/DataCite).
 - [ ] Tidak ada `TODO-CITE` tersisa; semua kebutuhan literatur sudah
-      ditanyakan ke user (batch, spesifik) dan jawabannya terverifikasi API.
+      ditanyakan ke user (batch, pertanyaan terbuka berbahasa Inggris) dan
+      referensi dari jawabannya terverifikasi API.
 - [ ] Semua angka/klaim tertelusur ke data & run nyata; tidak ada fabrikasi.
 - [ ] Deskripsi metode di teks == yang benar-benar dieksekusi.
 - [ ] Frekuensi kata promosi & AI-tell sudah dicek (`grep -oic`).
@@ -279,6 +295,8 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
       kaku; ejaan sesuai KBBI/PUEBI.
 - [ ] Semua figure dari skrip + data nyata; vektor/≥300 dpi; font terbaca;
       warna colorblind-safe; label+satuan lengkap; caption self-contained.
+- [ ] Tabel bergaya booktabs (tanpa garis vertikal); desimal konsisten dan
+      sesuai presisi; penanda hasil terbaik terdefinisi di caption.
 - [ ] Teks di gambar/tabel konsisten dengan body text dan lolos aturan de-AI;
       tidak ada diagram hasil AI generatif.
 - [ ] Klaim tidak overclaim; antisipasi serangan reviewer/penguji tertulis.
