@@ -21,6 +21,7 @@ instruction AI lain) di project Anda.
 | Cursor | `.cursorrules` / `.cursor/rules/` |
 | Gemini CLI (Google) | `GEMINI.md` |
 | OpenAI Codex CLI | `AGENTS.md` |
+| Kiro (AWS) | *steering files*: `.kiro/steering/*.md` (project) atau `~/.kiro/steering/` (global); `AGENTS.md` juga dibaca otomatis |
 | Windsurf | `.windsurfrules` |
 
 Karena konsepnya sama untuk semua AI, dalam repo ini kita menyebutnya secara umum sebagai ***instruction*** saja.
@@ -75,6 +76,30 @@ response = client.chat.completions.create(
 ```
 
 Dengan pola ini, satu file instruction yang sama bisa dipakai oleh Claude Code, API Anthropic, API OpenAI, Gemini, model lokal (Ollama), atau tool AI lainnya — instruction menjadi **satu sumber kebenaran (single source of truth)** untuk aturan project, apa pun AI-nya.
+
+### Contoh: Kiro (kiro.dev)
+
+Di [Kiro](https://kiro.dev) milik AWS, instruction disebut ***steering files***: file markdown di `.kiro/steering/` yang di-inject ke context agent. Cara memakai instruction dari repo ini:
+
+```bash
+# dari root project Anda
+mkdir -p .kiro/steering
+cp path/ke/instruction/manuscript/README.md  .kiro/steering/manuscript-core.md
+cp path/ke/instruction/manuscript/journal.md .kiro/steering/manuscript-journal.md
+```
+
+Secara default steering file selalu disertakan (*always included*). Mode inklusi bisa diatur lewat front matter di awal file, misalnya hanya dimuat saat file tertentu disentuh:
+
+```markdown
+---
+inclusion: fileMatch
+fileMatchPattern: "**/*.tex"
+---
+# Instruction: Integritas Akademik Penulisan Ilmiah
+...
+```
+
+Alternatif: Kiro juga otomatis membaca `AGENTS.md` di root workspace, jadi menaruh gabungan instruction sebagai `AGENTS.md` juga berfungsi (sekaligus terbaca oleh tool lain yang mendukung standar `AGENTS.md`, seperti OpenAI Codex).
 
 ## Apa itu CLAUDE.md?
 
