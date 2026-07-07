@@ -57,25 +57,29 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
    Prosedurnya:
    - Kumpulkan kebutuhan literatur menjadi **daftar pertanyaan terbuka**
      (kalimat tanya, bukan permintaan satu sitasi) untuk dijawab user.
-     **Satu pertanyaan = satu topik/klaim** agar jawaban fokus, panjang
-     pertanyaan maksimal ±500 karakter; tapi **jawabannya diharapkan berupa
-     penjelasan/sintesis yang disertai referensi — boleh banyak referensi
-     per pertanyaan.** Template per pertanyaan:
+     **Pertanyaan WAJIB ditulis dalam bahasa Inggris** (apa pun bahasa
+     naskahnya) — agar bisa langsung dipakai user untuk menelusuri
+     literatur (Google Scholar, Scopus, tool riset AI) yang mayoritas
+     berbahasa Inggris. **Satu pertanyaan = satu topik/klaim** agar jawaban
+     fokus, panjang pertanyaan maksimal ±500 karakter; tapi **jawabannya
+     diharapkan berupa penjelasan/sintesis yang disertai referensi — boleh
+     banyak referensi per pertanyaan.** Template per pertanyaan:
      ```text
-     [TODO-CITE-<n>] (<bagian naskah>, klaim: "<klaim yang perlu didukung>")
-     Pertanyaan: <kalimat tanya terbuka tentang apa kata literatur —
-                 bagaimana/sejauh mana/dalam kondisi apa/apa bukti ...>
-     Harapan jawaban: penjelasan + referensi pendukung (DOI/judul+tahun,
-                 boleh lebih dari satu; sebutkan venue & tahun bila bisa)
+     [TODO-CITE-<n>] (<manuscript section>, claim: "<claim needing support>")
+     Question: <open-ended question about what the literature says —
+                how/to what extent/under what conditions/what evidence ...>
+     Expected answer: explanation + supporting references (DOI/title+year,
+                multiple welcome; include venue & year where possible)
      ```
      Contoh:
      ```text
-     [TODO-CITE-3] (Bab 2, klaim: "fusi statis tetap kompetitif dibanding
-     fusi adaptif pada klasifikasi EEG lintas-subjek")
-     Pertanyaan: Bagaimana bukti empiris 2021–2026 membandingkan fusi
-     statis vs adaptif pada EEG lintas-subjek, dan dalam kondisi apa
-     masing-masing unggul?
-     Harapan jawaban: penjelasan + referensi (DOI/judul+tahun, boleh banyak).
+     [TODO-CITE-3] (Chapter 2, claim: "static fusion remains competitive
+     with adaptive fusion for cross-subject EEG classification")
+     Question: How does the empirical evidence from 2021–2026 compare
+     static versus adaptive fusion for cross-subject EEG classification,
+     and under what conditions does each approach win?
+     Expected answer: explanation + references (DOI/title+year, multiple
+     welcome).
      ```
    - **Perlakukan jawaban user sebagai material sintesis**, bukan sekadar
      daftar sitasi: penjelasan user menjadi bahan reasoning/keputusan/tulisan,
