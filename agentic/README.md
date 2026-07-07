@@ -1,10 +1,9 @@
-# Instruction: Pembangunan Sistem AI Agentic
+# Instruction: Pembangunan Sistem AI Agentic (Core)
 
 Instruction untuk AI saat membangun atau memelihara **sistem AI agentic** —
 aplikasi yang memakai LLM untuk membantu keputusan manusia (pipeline
 screening, ekstraksi, sintesis, review, dsb). Salin sebagai `CLAUDE.md`
-(atau file instruction AI lain) di repo sistem Anda, sesuaikan bagian
-bertanda `{...}`.
+(atau file instruction AI lain) di repo sistem Anda.
 
 **Cara pakai:** file ini (core) berlaku untuk semua sistem agentic;
 tambahkan overlay bila jenis pipeline-nya cocok.

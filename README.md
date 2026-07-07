@@ -1,8 +1,10 @@
 # instruction
 
-Kumpulan file *instruction* untuk task-task tertentu. Setiap folder berisi
-`README.md` yang isinya siap dipakai sebagai `CLAUDE.md` (atau file
-instruction AI lain) di project Anda.
+Kumpulan file *instruction* untuk task-task tertentu. Satu folder = satu
+task: `README.md` di dalamnya adalah instruction inti (core) yang siap
+dipakai sebagai `CLAUDE.md` (atau file instruction AI lain) di project
+Anda; beberapa folder punya **overlay** — file tambahan per sub-jenis task
+yang digabungkan dengan core saat dipakai.
 
 ## Daftar Instruction
 
