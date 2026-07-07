@@ -77,11 +77,13 @@ yang ditandai `{...}`.
    keadilan baseline, validitas statistik (koreksi *multiple comparisons*),
    kedalaman teori, dan generalisasi klaim melebihi cakupan eksperimen.
 
-## 4. Gaya tulisan — hindari "AI-tell" (WAJIB saat menulis/mengedit prosa)
+## 4. Gaya tulisan — de-AI / hindari "AI-tell" (WAJIB saat menulis/mengedit prosa)
 
-> Tujuan: prosa akademik yang natural, tidak "templated". Aturan ini
-> mengurangi sinyal AI-tell, BUKAN jaminan lolos detektor. Saat merestilasi:
-> **jangan ubah angka, sitasi, atau klaim** — hanya bentuk kalimatnya.
+> Tujuan: prosa akademik yang natural, tidak "templated". Catatan: detektor
+> similarity (mis. iThenticate) dan detektor-AI adalah hal terpisah dan
+> keduanya tidak sempurna; aturan ini mengurangi sinyal AI-tell, BUKAN
+> jaminan lolos detektor. Saat merestilasi (de-AI): **jangan ubah angka,
+> sitasi, atau klaim** — hanya bentuk kalimatnya.
 
 1. **Dilarang em-dash (`---`).** Pakai koma, tanda kurung, titik dua, atau
    pecah kalimat. En-dash (`--`) tetap untuk rentang angka (`8--12` Hz,
@@ -108,7 +110,39 @@ yang ditandai `{...}`.
    statement*; paling banyak sebut satu skrip entry-point reproduksi.
    Nama library (mis. scikit-learn) wajar disebut.
 
-## 5. Checklist sebelum menyatakan selesai
+## 5. Istilah wajar bahasa Indonesia (WAJIB untuk naskah berbahasa Indonesia)
+
+> Tujuan: naskah terbaca sebagai tulisan akademik Indonesia yang natural,
+> bukan hasil terjemahan mesin — terjemahan harfiah yang kaku adalah salah
+> satu AI-tell paling kentara dalam bahasa Indonesia.
+
+1. **Pakai istilah baku bila sudah lazim di bidangnya**, mis. "pembelajaran
+   mesin" (*machine learning*), "jaringan saraf tiruan", "himpunan data".
+   Bila padanan Indonesia TIDAK lazim di komunitas riset, **pertahankan
+   istilah asing dengan cetak miring** (*deep learning*, *overfitting*,
+   *attention*) — jangan memaksakan terjemahan yang tidak dikenal
+   ("pembelajaran mendalam yang dalam", "perhatian-diri").
+2. **Konsisten satu istilah untuk satu konsep** di seluruh naskah. Jangan
+   berganti-ganti antara "pelatihan"/"training" atau "citra"/"gambar"/"image"
+   — pilih satu, catat di daftar istilah bila perlu.
+3. **Hindari terjemahan harfiah yang kaku** khas mesin: "Dalam rangka untuk"
+   (*in order to* → cukup "untuk"), "Hal ini dikarenakan oleh" (→ "karena"),
+   "melakukan evaluasi terhadap" (→ "mengevaluasi"), "memiliki kemampuan
+   untuk" (→ "dapat/mampu").
+4. **Hindari kata/frasa AI-tell versi Indonesia** yang berlebihan:
+   "menggarisbawahi", "menyoroti", "memanfaatkan" (bila cukup "menggunakan"),
+   "sangat penting/krusial", "signifikan" tanpa dasar uji statistik, serta
+   pembuka generik "Dalam era digital...", "Seiring dengan perkembangan
+   teknologi...". Langsung ke persoalan spesifik.
+5. **Ikuti kaidah PUEBI/EYD**: istilah asing dicetak miring, kata serapan
+   baku ditulis sesuai KBBI (mis. "analisis" bukan "analisa", "metode" bukan
+   "metoda", "sistem" bukan "sistim"), hindari campuran kata Inggris di
+   tengah kalimat bila padanan bakunya lazim.
+6. **Kalimat aktif dan langsung lebih disukai** daripada pasif berlapis khas
+   terjemahan ("telah dilakukan pengujian oleh peneliti terhadap..." →
+   "peneliti menguji...").
+
+## 6. Checklist sebelum menyatakan selesai
 
 - [ ] Dokumen ter-build bersih: 0 citation undefined, 0 error bibliografi.
 - [ ] Semua entri bibliografi terverifikasi API (CrossRef/DataCite).
@@ -116,6 +150,8 @@ yang ditandai `{...}`.
 - [ ] Deskripsi metode di teks == yang benar-benar dieksekusi.
 - [ ] Frekuensi kata promosi & AI-tell sudah dicek (`grep -oic`).
 - [ ] Tidak ada em-dash; tidak ada pembuka klausa formulaik berlebih.
+- [ ] (Naskah Indonesia) Istilah konsisten & wajar, tanpa terjemahan harfiah
+      kaku; ejaan sesuai KBBI/PUEBI.
 - [ ] Klaim tidak overclaim; antisipasi serangan reviewer sudah tertulis.
 
 ---
