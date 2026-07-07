@@ -1,6 +1,14 @@
 # instruction
 
-Project Instructions
+Kumpulan file *instruction* untuk task-task tertentu. Setiap folder berisi
+`README.md` yang isinya siap dipakai sebagai `CLAUDE.md` (atau file
+instruction AI lain) di project Anda.
+
+## Daftar Instruction
+
+| Folder | Task |
+|--------|------|
+| [`manuscript/`](manuscript/README.md) | Validasi integritas akademik dalam penulisan jurnal bereputasi tinggi, artikel ilmiah, laporan dan proposal penelitian, disertasi, tesis |
 
 ## Konsep Umum: File *Instruction* untuk AI
 
