@@ -8,7 +8,7 @@ instruction AI lain) di project Anda.
 
 | Folder | Task |
 |--------|------|
-| [`manuscript/`](manuscript/README.md) | Validasi integritas akademik dalam penulisan jurnal bereputasi tinggi, artikel ilmiah, laporan dan proposal penelitian, disertasi, tesis |
+| [`manuscript/`](manuscript/README.md) | Validasi integritas akademik penulisan ilmiah. Core universal ([`README.md`](manuscript/README.md)) + overlay per jenis naskah: [`journal.md`](manuscript/journal.md) untuk artikel jurnal bereputasi tinggi, [`proposal.md`](manuscript/proposal.md) untuk proposal penelitian/disertasi/tesis. Pakai: core + satu overlay |
 
 ## Konsep Umum: File *Instruction* untuk AI
 
