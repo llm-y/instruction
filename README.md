@@ -9,7 +9,7 @@ instruction AI lain) di project Anda.
 | Folder | Task |
 |--------|------|
 | [`manuscript/`](manuscript/README.md) | Validasi integritas akademik penulisan ilmiah. Core universal ([`README.md`](manuscript/README.md)) + overlay per jenis naskah: [`journal.md`](manuscript/journal.md) untuk artikel jurnal bereputasi tinggi, [`proposal.md`](manuscript/proposal.md) untuk proposal penelitian/disertasi/tesis. Pakai: core + satu overlay |
-| [`agentic/`](agentic/README.md) | Pembangunan sistem AI agentic: invariant HITL/xAI/neuro-symbolic/multi-tenant, reproducible error, UX operasi AI panjang, stabilitas protokol pipeline, debugging state-first, verifikasi deploy, model pengujian |
+| [`agentic/`](agentic/README.md) | Pembangunan sistem AI agentic: invariant HITL/xAI/neuro-symbolic/multi-tenant, reproducible error, UX operasi AI panjang, stabilitas protokol pipeline, debugging state-first, verifikasi deploy, model pengujian. Overlay: [`slr.md`](agentic/slr.md) untuk pipeline SLR (PRISMA) |
 
 ## Konsep Umum: File *Instruction* untuk AI
 

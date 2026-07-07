@@ -6,6 +6,14 @@ screening, ekstraksi, sintesis, review, dsb). Salin sebagai `CLAUDE.md`
 (atau file instruction AI lain) di repo sistem Anda, sesuaikan bagian
 bertanda `{...}`.
 
+**Cara pakai:** file ini (core) berlaku untuk semua sistem agentic;
+tambahkan overlay bila jenis pipeline-nya cocok.
+
+| Jenis sistem | File yang digabung |
+|--------------|--------------------|
+| Sistem agentic umum | `README.md` saja |
+| Pipeline SLR (systematic literature review) | `README.md` + [`slr.md`](slr.md) |
+
 ---
 
 ## 1. Empat invariant arsitektur (WAJIB untuk fitur yang menyentuh keputusan penting)
