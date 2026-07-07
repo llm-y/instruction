@@ -35,6 +35,25 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
 4. Format bibliografi konsisten: nama author penuh (`Family, Given and ...`),
    lindungi akronim dengan kurung kurawal (`{EEG}`, `{BCI}`, `{CNN}`),
    en-dash untuk rentang halaman (`920--928`).
+5. **Bila butuh literatur pendukung yang belum ada di bibliografi → TANYA
+   USER, jangan mengarang dan jangan dibiarkan tanpa dukungan.** Berlaku
+   saat menulis klaim, merancang eksperimen, menyusun reasoning, atau
+   mengambil keputusan desain yang butuh dukungan akademis:
+   - Kumpulkan kebutuhan literatur menjadi **daftar pertanyaan spesifik**
+     untuk dijawab user, per butir memuat: (a) klaim/keputusan apa yang
+     perlu didukung dan di bagian mana, (b) jenis sumber yang dibutuhkan
+     (survey, bukti empiris, metode pembanding; venue dan rentang tahun),
+     (c) kandidat referensi yang AI ketahui — WAJIB ditandai
+     **[BELUM TERVERIFIKASI]**, hanya sebagai titik awal pencarian user.
+   - Ajukan pertanyaan secara **batch** (sekali kumpul di akhir pengerjaan),
+     bukan menetes satu-satu.
+   - Tandai lokasi di naskah dengan penanda sementara (mis.
+     `% TODO-CITE: <pertanyaan>`) agar build tetap jalan dan tidak ada
+     sitasi palsu yang masuk sementara menunggu jawaban.
+   - Jawaban user (judul/DOI/referensi) tetap **WAJIB diverifikasi ke API**
+     (aturan 2) sebelum dipakai — jawaban user bukan pengecualian.
+   - Setelah terjawab, gunakan referensi itu sebagai dasar
+     tulisan/eksperimen/reasoning/keputusan — bukan asumsi tanpa sumber.
 
 ## 2. Integritas klaim & data — klaim HARUS sesuai bukti (WAJIB)
 
@@ -207,6 +226,8 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
 
 - [ ] Dokumen ter-build bersih: 0 citation undefined, 0 error bibliografi.
 - [ ] Semua entri bibliografi terverifikasi API (CrossRef/DataCite).
+- [ ] Tidak ada `TODO-CITE` tersisa; semua kebutuhan literatur sudah
+      ditanyakan ke user (batch, spesifik) dan jawabannya terverifikasi API.
 - [ ] Semua angka/klaim tertelusur ke data & run nyata; tidak ada fabrikasi.
 - [ ] Deskripsi metode di teks == yang benar-benar dieksekusi.
 - [ ] Frekuensi kata promosi & AI-tell sudah dicek (`grep -oic`).
