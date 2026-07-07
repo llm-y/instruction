@@ -142,7 +142,61 @@ yang ditandai `{...}`.
    terjemahan ("telah dilakukan pengujian oleh peneliti terhadap..." →
    "peneliti menguji...").
 
-## 6. Checklist sebelum menyatakan selesai
+## 6. Figure & tabel — standar jurnal bereputasi tinggi (WAJIB saat membuat/mengedit gambar)
+
+> Aturan integritas (Bagian 2) dan gaya bahasa (Bagian 4–5) **berlaku juga
+> untuk semua teks di dalam gambar dan tabel**: label sumbu, legend, anotasi,
+> caption, dan judul kolom.
+
+### Integritas data dalam visualisasi
+
+1. **Setiap gambar hasil harus digenerate dari data nyata lewat skrip yang
+   tertelusur** (skrip + file data sumber + commit) — dilarang menggambar
+   ulang/menghias angka secara manual, dilarang angka hardcoded di skrip plot.
+2. **Jangan menyesatkan secara visual:** sumbu-y dipotong harus ditandai
+   jelas, skala log disebutkan, error bar didefinisikan di caption (SD? SE?
+   CI 95%?), jangan cherry-pick rentang data yang menguntungkan.
+3. **Caption harus mandiri (self-contained):** pembaca memahami gambar tanpa
+   membaca body text — apa yang diplot, dari data mana, n berapa, singkatan
+   didefinisikan.
+
+### Kosmetik — cek WAJIB sebelum gambar dianggap final
+
+4. **Format & resolusi:** utamakan vektor (PDF/EPS/SVG) untuk plot dan
+   diagram; raster (PNG/TIFF) minimal 300 dpi (600 dpi untuk line art).
+   JANGAN screenshot plot lalu ditempel.
+5. **Font terbaca saat tercetak:** ukuran teks dalam gambar ±8pt atau lebih pada
+   ukuran cetak final (satu kolom ≈ 3,5 in / 8,9 cm; dua kolom ≈ 7 in). Satu
+   keluarga font konsisten di semua gambar, idealnya serasi dengan font naskah.
+6. **Konsistensi antar-gambar:** palet warna, gaya garis, marker, urutan
+   legend, dan penamaan metode sama di seluruh naskah (metode yang sama =
+   warna yang sama di semua gambar).
+7. **Warna aman:** colorblind-safe (mis. palet Okabe–Ito, viridis) dan tetap
+   terbaca bila dicetak hitam-putih (bedakan juga dengan gaya garis/marker,
+   bukan warna saja).
+8. **Bersihkan elemen sisa (chartjunk):** tanpa judul ganda (judul cukup di
+   caption, bukan di dalam plot), tanpa gridline berlebih, tanpa border
+   ganda, tanpa whitespace lebar, tanpa watermark/nama tool.
+9. **Label lengkap:** semua sumbu berlabel dengan satuan, tick terbaca,
+   legend tidak menutupi data, panel bertanda (a), (b), (c) bila multi-panel
+   dan dirujuk per-panel di caption.
+
+### De-AI pada gambar
+
+10. **Teks dalam gambar mengikuti aturan de-AI** (Bagian 4–5): tanpa em-dash,
+    tanpa kata promosi, istilah konsisten dengan body text (jangan "training
+    accuracy" di gambar tapi "akurasi pelatihan" di teks).
+11. **Dilarang diagram/ilustrasi generatif-AI** (skema "kartun" hasil
+    text-to-image) untuk diagram metode — buat dengan tool diagram nyata
+    (TikZ, draw.io, Inkscape, matplotlib). Banyak jurnal bereputasi melarang
+    gambar hasil AI generatif, dan artefaknya (teks rusak, ikon aneh,
+    ketidakkonsistenan garis) adalah AI-tell yang kentara.
+12. **Hindari gaya "template AI" pada diagram:** kotak-panah seragam penuh
+    gradien dan ikon dekoratif tanpa makna. Setiap elemen visual harus
+    membawa informasi; diagram alur metode harus mencerminkan pipeline yang
+    BENAR-BENAR dieksekusi (cek terhadap kode, selaras Bagian 2).
+
+## 7. Checklist sebelum menyatakan selesai
 
 - [ ] Dokumen ter-build bersih: 0 citation undefined, 0 error bibliografi.
 - [ ] Semua entri bibliografi terverifikasi API (CrossRef/DataCite).
@@ -152,6 +206,10 @@ yang ditandai `{...}`.
 - [ ] Tidak ada em-dash; tidak ada pembuka klausa formulaik berlebih.
 - [ ] (Naskah Indonesia) Istilah konsisten & wajar, tanpa terjemahan harfiah
       kaku; ejaan sesuai KBBI/PUEBI.
+- [ ] Semua figure dari skrip + data nyata; vektor/≥300 dpi; font terbaca;
+      warna colorblind-safe; label+satuan lengkap; caption self-contained.
+- [ ] Teks di gambar/tabel konsisten dengan body text dan lolos aturan de-AI;
+      tidak ada diagram hasil AI generatif.
 - [ ] Klaim tidak overclaim; antisipasi serangan reviewer sudah tertulis.
 
 ---
