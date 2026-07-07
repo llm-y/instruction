@@ -56,13 +56,30 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
 
    Prosedurnya:
    - Kumpulkan kebutuhan literatur menjadi **daftar pertanyaan spesifik**
-     untuk dijawab user, per butir memuat: (a) klaim/keputusan apa yang
-     perlu didukung dan di bagian mana, (b) jenis sumber yang dibutuhkan
-     (survey, bukti empiris, metode pembanding; venue dan rentang tahun),
-     (c) kandidat referensi yang AI ketahui — WAJIB ditandai
-     **[BELUM TERVERIFIKASI]**, hanya sebagai titik awal pencarian user.
+     untuk dijawab user. **Satu pertanyaan = satu kebutuhan literatur,
+     maksimal ±500 karakter** — komprehensif lewat struktur, bukan panjang.
+     Template per pertanyaan:
+     ```text
+     [TODO-CITE-<n>] (<bagian naskah>, <konteks singkat>)
+     Klaim : "<klaim/keputusan yang perlu didukung, kutip persis>"
+     Butuh : <jenis sumber: survey/bukti empiris/metode pembanding>,
+             <venue & rentang tahun, mis. jurnal Q1, 2020–2026>
+     Kandidat [BELUM TERVERIFIKASI]: <author tahun "judul singkat">, bila ada
+     Jawab : DOI, atau judul + tahun
+     ```
+     Contoh:
+     ```text
+     [TODO-CITE-3] (Bab 2, positioning fusi statis)
+     Klaim : "fusi statis tetap kompetitif dibanding fusi adaptif
+             pada klasifikasi EEG lintas-subjek"
+     Butuh : bukti empiris pembanding, jurnal Q1/konferensi A*, 2021–2026
+     Kandidat [BELUM TERVERIFIKASI]: Wu et al. 2023 "Adaptive fusion for
+             cross-subject EEG" (IEEE TNSRE?)
+     Jawab : DOI, atau judul + tahun
+     ```
    - Ajukan pertanyaan secara **batch** (sekali kumpul di akhir pengerjaan),
-     bukan menetes satu-satu.
+     bukan menetes satu-satu. Urutkan dari yang paling menentukan
+     (klaim inti/novelty dulu, pelengkap belakangan).
    - Tandai lokasi di naskah dengan penanda sementara (mis.
      `% TODO-CITE: <pertanyaan>`) agar build tetap jalan dan tidak ada
      sitasi palsu yang masuk sementara menunggu jawaban.
