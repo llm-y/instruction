@@ -35,7 +35,9 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
    merusak parsing — tandai di luar entri.)
 4. Format bibliografi konsisten: nama author penuh (`Family, Given and ...`),
    lindungi akronim dengan kurung kurawal (`{EEG}`, `{BCI}`, `{CNN}`),
-   en-dash untuk rentang halaman (`920--928`).
+   en-dash untuk rentang halaman (`920--928`). **Tanpa entri duplikat**
+   (cek by DOI dan by judul — paper yang sama sering masuk dua kali dengan
+   key berbeda); sebelum submit, bersihkan entri yang tidak pernah disitasi.
 5. **Bila butuh literatur pendukung yang belum ada di bibliografi → TANYA
    USER, jangan mengarang dan jangan dibiarkan tanpa dukungan.** Berlaku
    saat menulis klaim, merancang eksperimen, menyusun reasoning, atau
@@ -280,10 +282,45 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
     membawa informasi; diagram alur metode harus mencerminkan pipeline yang
     BENAR-BENAR dieksekusi (cek terhadap kode, selaras Bagian 2).
 
-## 7. Checklist inti sebelum menyatakan selesai
+## 7. Teknis LaTeX (WAJIB untuk naskah LaTeX)
 
-- [ ] Dokumen ter-build bersih: 0 citation undefined, 0 error bibliografi.
-- [ ] Semua entri bibliografi terverifikasi API (CrossRef/DataCite).
+1. **Build bersih menyeluruh, bukan hanya sitasi:** jalankan siklus build
+   penuh sampai stabil (`latexmk -pdf`, atau `pdflatex` + `bibtex` +
+   `pdflatex` ×2 sesuai setup repo) dan pastikan **0 undefined** untuk
+   sitasi DAN referensi silang (`\ref`/`\cref`), 0 file gambar hilang,
+   tanpa error. Periksa log, jangan hanya lihat PDF-nya jadi.
+2. **Rujuk semua elemen via `\ref`/`\cref`, jangan manual:** "Figure~3"
+   yang diketik tangan akan salah saat urutan berubah. Setiap figure,
+   tabel, dan persamaan penting HARUS dirujuk di teks (tanpa float
+   yatim), dan `\label` ditempatkan SETELAH `\caption`.
+3. **Spasi tak-putus (`~`)** sebelum rujukan dan sitasi: `Figure~\ref{...}`,
+   `Table~\ref{...}`, `Section~\ref{...}`, `...~\cite{...}` — mencegah
+   nomor terdampar di awal baris.
+4. **Matematika di math mode:** simbol/variabel selalu `$n$`, `$\alpha$`
+   (bukan huruf biasa); fungsi/operator non-variabel pakai bentuk tegak
+   (`\mathrm{...}`, `\log`, `\max`); satuan konsisten di seluruh naskah
+   (idealnya `siunitx`, atau manual seragam dengan spasi tipis `5\,mm`).
+5. **Tipografi LaTeX yang benar:** tanda kutip ``` ``...'' ``` bukan
+   `"..."`; `\%` untuk persen; en-dash `--` untuk rentang; hindari `\\`
+   untuk ganti paragraf (pakai baris kosong).
+6. **Angka hasil di teks ideal di-`\input` dari file yang digenerate
+   skrip**, bukan diketik manual — memperkuat ketertelusuran (Bagian 2)
+   dan mencegah teks basi saat hasil diperbarui.
+7. **Satu kalimat per baris di source** (line break tiap kalimat) —
+   diff git jadi per-kalimat, memudahkan review revisi.
+8. **Ikuti kelas/template venue tanpa diutak-atik:** jangan override
+   margin, spacing, atau font kelas; jangan tinggalkan blok komentar
+   draft yang panjang di source yang akan diserahkan.
+
+## 8. Checklist inti sebelum menyatakan selesai
+
+- [ ] Dokumen ter-build bersih: 0 citation undefined, 0 error bibliografi,
+      0 undefined `\ref`/`\cref`, 0 file gambar hilang.
+- [ ] Semua entri bibliografi terverifikasi API (CrossRef/DataCite); tanpa
+      duplikat; entri tak tersitasi dibersihkan sebelum submit.
+- [ ] (LaTeX) Semua float dirujuk via `\ref`/`\cref` dengan `~`; `\label`
+      setelah `\caption`; math mode untuk simbol; kutip/persen/en-dash
+      sesuai tipografi LaTeX.
 - [ ] Tidak ada `TODO-CITE` tersisa; semua kebutuhan literatur sudah
       ditanyakan ke user (batch, pertanyaan terbuka berbahasa Inggris) dan
       referensi dari jawabannya terverifikasi API.
