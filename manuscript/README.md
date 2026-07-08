@@ -60,10 +60,11 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
    Prosedurnya:
    - Kumpulkan kebutuhan literatur menjadi **daftar pertanyaan terbuka**
      (kalimat tanya, bukan permintaan satu sitasi) untuk dijawab user.
-     **Pertanyaan WAJIB ditulis dalam bahasa Inggris** (apa pun bahasa
-     naskahnya) — agar bisa langsung dipakai user untuk menelusuri
-     literatur (Google Scholar, Scopus, tool riset AI) yang mayoritas
-     berbahasa Inggris. **Satu pertanyaan = satu topik/klaim** agar jawaban
+     **Pertanyaan ditulis dalam bahasa Inggris** (apa pun bahasa naskahnya)
+     agar bisa langsung dipakai user menelusuri literatur (Google Scholar,
+     Scopus, tool riset AI) yang mayoritas berbahasa Inggris, **disertai
+     salinan terjemahan Indonesia** (bilingual) untuk kejelasan user.
+     **Satu pertanyaan = satu topik/klaim** agar jawaban
      fokus, panjang pertanyaan maksimal ±500 karakter; tapi **jawabannya
      diharapkan berupa penjelasan/sintesis yang disertai referensi — boleh
      banyak referensi per pertanyaan.** Template per pertanyaan:
@@ -99,6 +100,33 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
      yang diambil dari penjelasan user diatribusikan ke referensi yang
      tepat di naskah, (c) prosa user ditulis ulang mengikuti aturan gaya
      (Bagian 4–5), tidak disalin mentah.
+
+6. **Penguatan sitasi menyeluruh (proaktif) — saat diminta memperkuat
+   dukungan literatur atau menaikkan jumlah sitasi naskah yang sudah ada.**
+   Jalankan alur berikut secara berurutan:
+   - **Audit:** baca naskah target, daftar SEMUA `\cite`/`\textcite`,
+     kelompokkan per bagian.
+   - **Peta celah sitasi:** buat tabel `bagian → status sitasi
+     (cukup / tipis / kosong) → celah spesifik` (klaim/kalimat mana yang
+     belum didukung), agar cakupan terlihat menyeluruh, bukan tebak-tebakan.
+   - **Pertanyaan sintesis:** untuk tiap celah, tulis satu pertanyaan
+     mandiri (format & aturan ≤500 karakter, bilingual EN+ID dari poin 5)
+     dan **petakan eksplisit ke klaim/kalimat** yang akan didukungnya.
+   - **Target kuantitatif** bila user memberi angka (mis. dari 11 ke 30–40
+     sitasi): perlakukan sebagai **target minimal cakupan celah, BUKAN
+     alasan mengarang**. Bila celah nyata lebih sedikit dari target,
+     laporkan ke user — jangan memaksakan sitasi yang tidak memperkuat apa
+     pun demi memenuhi angka.
+   - **Kumpulkan ke satu file pertanyaan khusus** (mis.
+     `literatur/pertanyaan.md`): bilingual (blok EN lalu blok ID), tiap
+     pertanyaan diberi tag topik/pilar + hitung karakter (mis. `[469]`),
+     dengan header cara pakai (tempel satu per satu ke tool riset) dan
+     pengingat: resolve ID sumber → DOI → verifikasi CrossRef/DataCite
+     sebelum masuk `.bib`.
+   - **Integritas (tegakkan):** hasil sintesis WAJIB resolve DOI →
+     verifikasi API → baru masuk `.bib`; DILARANG fabrikasi; **sitasi
+     memperkuat argumen yang SUDAH ada, BUKAN menambah klaim baru** yang
+     tidak didukung eksperimen/data (selaras Bagian 2).
 
 ## 2. Integritas klaim & data — klaim HARUS sesuai bukti (WAJIB)
 
@@ -322,8 +350,12 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
       setelah `\caption`; math mode untuk simbol; kutip/persen/en-dash
       sesuai tipografi LaTeX.
 - [ ] Tidak ada `TODO-CITE` tersisa; semua kebutuhan literatur sudah
-      ditanyakan ke user (batch, pertanyaan terbuka berbahasa Inggris) dan
+      ditanyakan ke user (batch, pertanyaan terbuka bilingual EN+ID) dan
       referensi dari jawabannya terverifikasi API.
+- [ ] (Penguatan sitasi) Audit `\cite` per bagian + peta celah dibuat;
+      pertanyaan terkumpul di file khusus; target jumlah sitasi dipenuhi
+      dari celah nyata (bukan sitasi paksaan); tiap sitasi memperkuat klaim
+      yang ada, bukan klaim baru.
 - [ ] Semua angka/klaim tertelusur ke data & run nyata; tidak ada fabrikasi.
 - [ ] Deskripsi metode di teks == yang benar-benar dieksekusi.
 - [ ] Frekuensi kata promosi & AI-tell sudah dicek (`grep -oic`).
