@@ -25,8 +25,9 @@ menambah yang spesifik laporan.
 2. **Ringkasan/executive summary padat:** tujuan, apa yang dikerjakan, hasil
    utama **dengan angka nyata**, dan status pencapaian luaran — cukup dibaca
    berdiri sendiri oleh evaluator/pemberi dana.
-3. **Konsistensi internal** (core Bagian 1 & J-analog): istilah, notasi, dan
-   angka identik di ringkasan = body = tabel = lampiran.
+3. **Konsistensi internal:** istilah, notasi, dan angka identik di
+   ringkasan = body = tabel = lampiran (selaras core Bagian 2 soal
+   ketertelusuran angka).
 
 ## L2. Akuntabilitas luaran & realisasi (WAJIB — inti laporan)
 
