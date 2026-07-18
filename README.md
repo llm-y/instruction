@@ -11,6 +11,7 @@ yang digabungkan dengan core saat dipakai.
 | Folder | Task |
 |--------|------|
 | [`manuscript/`](manuscript/README.md) | Validasi integritas akademik penulisan ilmiah. Core universal ([`README.md`](manuscript/README.md)) + overlay per jenis naskah: [`journal.md`](manuscript/journal.md) untuk artikel jurnal bereputasi tinggi, [`proposal.md`](manuscript/proposal.md) untuk proposal penelitian/disertasi/tesis, [`laporan.md`](manuscript/laporan.md) untuk laporan penelitian/teknis. Pakai: core + satu overlay |
+| [`buku/`](buku/README.md) | Penyusunan buku ber-ISBN (buku ajar, monograf, referensi, umum, sastra): kelayakan ISBN (min 60 halaman isi, edar publik, bukan modul/tugas/laporan mentah), struktur front/main/back matter, narasi buku, self-review LAYAK/TIDAK LAYAK. Overlay: [`template-bukupedia.md`](buku/template-bukupedia.md) (spesifikasi LaTeX penerbit). Non-fiksi ilmiah: gabungkan `manuscript/README.md` |
 | [`agentic/`](agentic/README.md) | Pembangunan sistem AI agentic: invariant HITL/xAI/neuro-symbolic/multi-tenant, reproducible error, UX operasi AI panjang, stabilitas protokol pipeline, debugging state-first, verifikasi deploy, model pengujian. Overlay: [`slr.md`](agentic/slr.md) untuk pipeline SLR (PRISMA) |
 
 ## Konsep Umum: File *Instruction* untuk AI
