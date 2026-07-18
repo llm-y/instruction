@@ -50,7 +50,12 @@ halaman indeks direktori itu (dibuka seperti `index.html`), jadi jaga agar
    https://ll.my.id/instruction/manuscript/"). Karena itu: (a) `README.md`
    root punya bagian **"Cara Memakai"** (tempel tautan ke AI / `curl` raw /
    unduh ZIP), dan (b) tiap **core** punya blok kutipan **"Diakses via web?"**
-   yang menyuruh AI mengambil overlay yang sesuai. Base URL mentah:
+   yang menyuruh AI mengambil overlay yang sesuai. Selain itu, kasus tersering:
+   pengguna hanya memberi tautan **root** dan menaruh dokumen di folder —
+   maka `README.md` root punya bagian **"Untuk AI — pilih otomatis"** berisi
+   tabel rute (ciri dokumen → core+overlay) agar AI memilih sendiri, atau
+   bertanya bila ambigu. Tabel rute ini WAJIB diperbarui tiap ada folder/
+   overlay baru. Base URL mentah:
    `https://raw.githubusercontent.com/llm-y/instruction/main/{folder}/{file}`.
    Bila repo/branch/domain berubah, perbarui SEMUA rujukan ini.
 

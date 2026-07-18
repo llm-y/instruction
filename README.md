@@ -6,6 +6,24 @@ dipakai sebagai `CLAUDE.md` (atau file instruction AI lain) di project
 Anda; beberapa folder punya **overlay** — file tambahan per sub-jenis task
 yang digabungkan dengan core saat dipakai.
 
+## Untuk AI — pilih instruksi yang cocok secara otomatis
+
+Bila pengguna hanya memberi tautan root ini tanpa memilih task — mis. *"sesuaikan dengan instruksi di https://ll.my.id/instruction/"* sambil menaruh dokumen di folder kerjanya — **lakukan ini lebih dulu, sebelum mengerjakan apa pun:**
+
+1. **Periksa isi folder/dokumen pengguna** (jenis file, struktur, isi) untuk menentukan jenis pekerjaan.
+2. **Pilih SATU baris** di tabel rute di bawah, lalu **ambil file core + overlay-nya** sebagai instruksi (cara ambil: lihat [Cara Memakai](#cara-memakai-tanpa-perlu-git); URL mentah `https://raw.githubusercontent.com/llm-y/instruction/main/{path}`).
+3. **Bila ambigu, cocok >1, atau tak ada yang pas — TANYA pengguna.** Jangan menebak diam-diam, dan jangan menerapkan aturan yang tidak relevan dengan dokumennya.
+
+| Ciri dokumen / pekerjaan pengguna | Ambil (core + overlay) |
+|---|---|
+| Artikel/naskah untuk **jurnal atau konferensi** (mis. `.tex`/`.docx` berstruktur IMRaD, ada abstrak & hasil) | `manuscript/README.md` + `manuscript/journal.md` |
+| **Proposal** penelitian / disertasi / tesis (bab 1–3, rencana, belum ada hasil) | `manuscript/README.md` + `manuscript/proposal.md` |
+| **Laporan** penelitian / akhir hibah / laporan teknis | `manuscript/README.md` + `manuscript/laporan.md` |
+| Naskah **buku ber-ISBN** (bab-bab buku, buku ajar, monograf, novel, antologi) | `buku/README.md` (+ `manuscript/README.md` bila ilmiah, + overlay template penerbit bila ada) |
+| **Kode aplikasi/agen berbasis LLM** (pipeline screening, ekstraksi, review, sintesis) | `agentic/README.md` (+ `agentic/slr.md` bila pipeline SLR) |
+
+Detail tiap task ada di tabel **Daftar Instruction** berikut.
+
 ## Daftar Instruction
 
 | Folder | Task |
