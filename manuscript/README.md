@@ -142,6 +142,15 @@ bagian yang ditandai `{...}`.
 
 ## 2. Integritas klaim & data — klaim HARUS sesuai bukti (WAJIB)
 
+> **Cek kelengkapan bahan lebih dulu, sebelum menulis.** Inventarisasi apa
+> yang tersedia di folder kerja: dokumen awal/draf, data mentah, kode program,
+> log/hasil eksperimen, dan luaran. Bila bahan yang DIPERLUKAN suatu bagian
+> belum ada (mis. menulis Hasil tanpa data/eksperimen, membahas kode yang tak
+> ada, atau melaporkan luaran tanpa buktinya), **JANGAN mengarang atau menambal
+> dengan angka/klaim buatan** — daftar yang kurang, laporkan ke user, dan
+> tandai bagian itu sebagai belum bisa ditulis. Kelengkapan bahan menentukan
+> bagian mana yang boleh dikerjakan sekarang.
+
 1. **Setiap angka dan klaim hasil di naskah harus dapat ditelusuri ke
    sumbernya**: skrip yang menghasilkannya, file data/CSV sumber, dan commit.
    Tidak ada angka yang "muncul" tanpa jejak run/eksperimen nyata.
@@ -391,6 +400,9 @@ ikuti overlay-nya (mis. `buku/template-bukupedia.md` T0).
       pertanyaan terkumpul di file khusus; target jumlah sitasi dipenuhi
       dari celah nyata (bukan sitasi paksaan); tiap sitasi memperkuat klaim
       yang ada, bukan klaim baru.
+- [ ] Kelengkapan bahan (dokumen awal/data/kode/eksperimen/hasil) dicek di
+      awal; bagian tanpa bahan pendukung tidak ditulis/dikarang, kekurangan
+      dilaporkan ke user.
 - [ ] Semua angka/klaim tertelusur ke data & run nyata; tidak ada fabrikasi.
 - [ ] Deskripsi metode di teks == yang benar-benar dieksekusi.
 - [ ] Frekuensi kata promosi & AI-tell sudah dicek (`grep -oic`).

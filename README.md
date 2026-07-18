@@ -12,7 +12,8 @@ Bila pengguna hanya memberi tautan root ini tanpa memilih task — mis. *"sesuai
 
 1. **Periksa isi folder/dokumen pengguna** (jenis file, struktur, isi) untuk menentukan jenis pekerjaan.
 2. **Pilih SATU baris** di tabel rute di bawah, lalu **ambil file core + overlay-nya** sebagai instruksi (cara ambil: lihat [Cara Memakai](#cara-memakai-tanpa-perlu-git); URL mentah `https://raw.githubusercontent.com/llm-y/instruction/main/{path}`).
-3. **Bila ambigu, cocok >1, atau tak ada yang pas — TANYA pengguna.** Jangan menebak diam-diam, dan jangan menerapkan aturan yang tidak relevan dengan dokumennya.
+3. **Periksa kelengkapan bahan** untuk task itu (dokumen awal, data, kode program, eksperimen, hasil/result). Bila ada yang diperlukan tetapi belum ada, **laporkan ke pengguna dan JANGAN mengarang** bagian yang tak didukung bahan (lihat `manuscript/README.md` Bagian 2).
+4. **Bila ambigu, cocok >1, atau tak ada yang pas — TANYA pengguna.** Jangan menebak diam-diam, dan jangan menerapkan aturan yang tidak relevan dengan dokumennya.
 
 | Ciri dokumen / pekerjaan pengguna | Ambil (core + overlay) |
 |---|---|

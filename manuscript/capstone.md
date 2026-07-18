@@ -157,6 +157,9 @@ hanya menambah yang spesifik capstone.
 
 ## C7. Checklist capstone
 
+- [ ] Bahan bukti profil tersedia sebelum menulis (Proyek 1: repo + log/commit
+      bug; Proyek 2: kode fitur + hasil uji; Proyek 3: desain + API/M2M + bukti
+      kepemimpinan); yang kurang dilaporkan, tidak dikarang (core Bagian 2).
 - [ ] Proyek ke berapa (1/2/3) sudah ditentukan; **profil target tahun itu
       (C1) terbukti** di laporan (Proyek 1: debugging nyata + SCM/workflow/
       CI-CD/vibe coding + dasar SMK RPL; Proyek 2: fitur lengkap end-to-end +
