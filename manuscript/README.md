@@ -323,6 +323,13 @@ bagian yang ditandai `{...}`.
 
 ## 7. Teknis LaTeX (WAJIB untuk naskah LaTeX)
 
+> **Prasyarat — pastikan LaTeX terpasang sebelum build.** Bila perintah build
+> (`latexmk`/`pdflatex`) tidak tersedia, JANGAN gagal diam-diam: pandu
+> pengguna memasang distribusi LaTeX sesuai OS (TeX Live untuk Linux/macOS,
+> MiKTeX untuk Windows, atau TinyTeX yang ringan lintas-OS), lalu verifikasi
+> `pdflatex --version` sebelum lanjut. Bila memakai template penerbit dengan
+> toolchain khusus, ikuti overlay-nya (mis. `buku/template-bukupedia.md` T0).
+
 1. **Build bersih menyeluruh, bukan hanya sitasi:** jalankan siklus build
    penuh sampai stabil (`latexmk -pdf`, atau `pdflatex` + `bibtex` +
    `pdflatex` ×2 sesuai setup repo) dan pastikan **0 undefined** untuk

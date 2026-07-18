@@ -10,6 +10,34 @@ Sumber template: `universitas.bukupedia.co.id/template`.
 
 ---
 
+## T0. Prasyarat: instalasi LaTeX (toolchain Bukupedia) (WAJIB sebelum build)
+
+> Bila LaTeX belum terpasang, **pasang dulu sebelum menyusun/kompilasi** —
+> jangan biarkan build gagal diam-diam. Ini toolchain yang dipakai template
+> Bukupedia; untuk naskah non-Bukupedia, distro umum (TeX Live/MiKTeX) juga
+> cukup (core `manuscript/README.md` Bagian 7).
+
+1. **Pasang TinyTeX via R** (distribusi TeX Live ringan):
+   ```r
+   install.packages('tinytex')
+   tinytex::install_tinytex()
+   ```
+2. **Verifikasi instalasi:**
+   ```r
+   tinytex::tinytex_root()
+   tinytex::tlmgr("--version")
+   ```
+3. **Pasang paket yang dibutuhkan template** (`tlmgr install <paket>`):
+   ```
+   inputenc fontenc mathptmx courier helvet amsmath babel geometry setspace
+   titlesec graphicx hyperref booktabs array caption enumitem parskip fancyhdr
+   tocloft tabularx longtable ragged2e biblatex bibtex logreq xstring
+   ```
+4. **Kompilasi** lewat skrip `compile-latex.ps1` (menjalankan `pdflatex` →
+   `bibtex` → `pdflatex` ×2); berkas utama `bukped.tex` → keluaran `bukped.pdf`.
+5. **Editor & alat pendukung (opsional):** VS Code + ekstensi `vscode-pdf`,
+   serta Git/GitHub untuk kontrol versi.
+
 ## T1. Ukuran halaman & margin (WAJIB — jangan diubah)
 
 1. **Ukuran buku 15,5 × 23 cm.** Margin atas/bawah 2 cm, kiri/kanan 1,5 cm.
@@ -65,6 +93,8 @@ Sumber template: `universitas.bukupedia.co.id/template`.
 
 ## T6. Checklist template Bukupedia
 
+- [ ] LaTeX terpasang sebelum build (TinyTeX + paket template, atau distro
+      lain); `bukped.tex` terkompilasi jadi `bukped.pdf` tanpa error.
 - [ ] Ukuran 15,5 × 23 cm; margin 2 cm (atas/bawah) & 1,5 cm (kiri/kanan);
       kelas template tidak dioverride.
 - [ ] Font Carlito 11pt spasi tunggal; semua paragraf menjorok termasuk yang
@@ -83,4 +113,5 @@ Sumber template: `universitas.bukupedia.co.id/template`.
 
 ---
 
-*Saripati dari template buku Bukupedia (`universitas.bukupedia.co.id/template`).*
+*Saripati dari template buku Bukupedia (`universitas.bukupedia.co.id/template`)
+dan panduan instalasi LaTeX-nya (`universitas.bukupedia.co.id/latex`).*
