@@ -5,8 +5,11 @@ buku yang akan didaftarkan ISBN** (buku ajar/teks, monograf, referensi, buku
 umum/populer, atau karya sastra). Aturan di file ini **universal** untuk semua
 buku ber-ISBN.
 
-**Cara pakai:** salin file ini sebagai `CLAUDE.md` (atau file instruction AI
-lain) di repo naskah buku Anda. Bila penerbit menyediakan template, gabungkan
+**Cara pakai:** salin file ini sebagai **file instruction AI** di repo naskah
+buku Anda — `CLAUDE.md` (Claude Code), `AGENTS.md` (Codex/Antigravity),
+`QWEN.md` (Qwen), `GEMINI.md` (Gemini CLI), *steering file* Kiro,
+`.cursorrules`, dst; sesuaikan dengan tool Anda (lihat tabel di
+[README root](../README.md)). Bila penerbit menyediakan template, gabungkan
 overlay templatenya (mis. [`template-bukupedia.md`](template-bukupedia.md)).
 Untuk **buku non-fiksi ilmiah** (buku ajar, monograf, referensi), gabungkan
 juga [`manuscript/README.md`](../manuscript/README.md) — aturan integritas

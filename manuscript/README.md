@@ -5,8 +5,11 @@ akademik apa pun: artikel jurnal, laporan, proposal penelitian, disertasi,
 tesis. Aturan di file ini **universal** — berlaku untuk semua jenis naskah.
 
 **Cara pakai:** gabungkan file ini dengan SATU overlay sesuai jenis naskah,
-lalu salin gabungannya sebagai `CLAUDE.md` (atau file instruction AI lain)
-di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
+lalu salin gabungannya sebagai **file instruction AI** di repo naskah Anda —
+`CLAUDE.md` (Claude Code), `AGENTS.md` (Codex/Antigravity), `QWEN.md` (Qwen),
+`GEMINI.md` (Gemini CLI), *steering file* Kiro, `.cursorrules`, dst; sesuaikan
+dengan tool Anda (lihat tabel di [README root](../README.md)). Sesuaikan juga
+bagian yang ditandai `{...}`.
 
 | Jenis naskah | File yang digabung |
 |--------------|--------------------|

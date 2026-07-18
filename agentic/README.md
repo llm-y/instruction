@@ -2,8 +2,11 @@
 
 Instruction untuk AI saat membangun atau memelihara **sistem AI agentic** —
 aplikasi yang memakai LLM untuk membantu keputusan manusia (pipeline
-screening, ekstraksi, sintesis, review, dsb). Salin sebagai `CLAUDE.md`
-(atau file instruction AI lain) di repo sistem Anda.
+screening, ekstraksi, sintesis, review, dsb). Salin sebagai **file
+instruction AI** di repo sistem Anda — `CLAUDE.md` (Claude Code), `AGENTS.md`
+(Codex/Antigravity), `QWEN.md` (Qwen), `GEMINI.md` (Gemini CLI), *steering
+file* Kiro, `.cursorrules`, dst; sesuaikan dengan tool Anda (lihat tabel di
+[README root](../README.md)).
 
 **Cara pakai:** file ini (core) berlaku untuk semua sistem agentic;
 tambahkan overlay bila jenis pipeline-nya cocok.
