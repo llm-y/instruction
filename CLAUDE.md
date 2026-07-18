@@ -45,6 +45,14 @@ halaman indeks direktori itu (dibuka seperti `index.html`), jadi jaga agar
    yang sama sudah benar di KEDUA konteks (terverifikasi di situs Pages) —
    jangan hardcode `.html` atau URL absolut, dan pastikan file target
    memang ada agar rewrite tidak gagal.
+7. **Pengguna diasumsikan awam & akses via web, bukan Git.** Banyak pengguna
+   hanya menempel tautan Pages ke prompt AI-nya (mis. "gunakan instruksi ini
+   https://ll.my.id/instruction/manuscript/"). Karena itu: (a) `README.md`
+   root punya bagian **"Cara Memakai"** (tempel tautan ke AI / `curl` raw /
+   unduh ZIP), dan (b) tiap **core** punya blok kutipan **"Diakses via web?"**
+   yang menyuruh AI mengambil overlay yang sesuai. Base URL mentah:
+   `https://raw.githubusercontent.com/llm-y/instruction/main/{folder}/{file}`.
+   Bila repo/branch/domain berubah, perbarui SEMUA rujukan ini.
 
 ## Saat menambah/mengubah instruction
 - Folder baru → tambahkan barisnya di tabel "Daftar Instruction" di

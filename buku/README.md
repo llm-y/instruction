@@ -22,6 +22,13 @@ sana dan **tidak diduplikasi** di sini. Sesuaikan bagian bertanda `{...}`.
 | Buku umum / populer non-ilmiah | `README.md` (+ overlay template penerbit) |
 | Karya sastra (novel, antologi, puisi) | `README.md` (+ overlay template penerbit); integritas sitasi tidak wajib |
 
+> **Diakses via web?** Bila pengguna hanya memberi AI tautan halaman ini,
+> ini adalah **core** produksi buku. Untuk buku non-fiksi ilmiah, AI **wajib
+> mengambil juga** `manuscript/README.md`; bila penerbit punya template,
+> ambil overlay templatenya. Versi mentah untuk di-`curl`/fetch:
+> `https://raw.githubusercontent.com/llm-y/instruction/main/buku/<file>` dan
+> `https://raw.githubusercontent.com/llm-y/instruction/main/manuscript/README.md`.
+
 ---
 
 ## 1. Kelayakan ISBN — cek SEBELUM menulis & sebelum submit (WAJIB)

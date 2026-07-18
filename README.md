@@ -14,6 +14,31 @@ yang digabungkan dengan core saat dipakai.
 | [`buku/`](buku/README.md) | Penyusunan buku ber-ISBN (buku ajar, monograf, referensi, umum, sastra): kelayakan ISBN (min 60 halaman isi, edar publik, bukan modul/tugas/laporan mentah), struktur front/main/back matter, narasi buku, self-review LAYAK/TIDAK LAYAK. Overlay: [`template-bukupedia.md`](buku/template-bukupedia.md) (spesifikasi LaTeX penerbit). Non-fiksi ilmiah: gabungkan `manuscript/README.md` |
 | [`agentic/`](agentic/README.md) | Pembangunan sistem AI agentic: invariant HITL/xAI/neuro-symbolic/multi-tenant, reproducible error, UX operasi AI panjang, stabilitas protokol pipeline, debugging state-first, verifikasi deploy, model pengujian. Overlay: [`slr.md`](agentic/slr.md) untuk pipeline SLR (PRISMA) |
 
+## Cara Memakai (tanpa perlu Git)
+
+Anda **tidak perlu menginstal Git atau paham teknis.** Dari tabel di atas, pilih satu task, catat file **core**-nya dan (bila ada) **satu overlay**. Lalu pakai salah satu cara:
+
+**1. Cukup berikan tautannya ke asisten AI (paling mudah).** Tempel tautan halaman core ke prompt AI Anda:
+
+> tolong gunakan instruksi ini https://ll.my.id/instruction/manuscript/
+
+Halaman itu adalah **core**; instruksi di dalamnya memberi tahu AI bahwa ia perlu **satu overlay** (mis. jurnal/proposal/laporan) dan cara mengambilnya. Agar makin pasti, sebutkan jenis naskahnya, atau tempel sekalian kedua tautan (core + overlay):
+
+> Ikuti https://ll.my.id/instruction/manuscript/ dan https://ll.my.id/instruction/manuscript/journal.html sebagai aturan saat membantu naskah jurnal saya.
+
+**2. Ambil file mentah via `curl`.** Tiap file tersedia sebagai markdown mentah. Gabungkan core + overlay menjadi satu file instruction (beri nama `CLAUDE.md`/`AGENTS.md`/`QWEN.md`/dst sesuai tool Anda):
+
+```bash
+curl -sL \
+  https://raw.githubusercontent.com/llm-y/instruction/main/manuscript/README.md \
+  https://raw.githubusercontent.com/llm-y/instruction/main/manuscript/journal.md \
+  > CLAUDE.md
+```
+
+Pola URL mentah: `https://raw.githubusercontent.com/llm-y/instruction/main/{folder}/{file}` — ganti `{folder}/{file}` sesuai task Anda (mis. `buku/README.md`, `agentic/slr.md`).
+
+**3. Unduh semua sekaligus (ZIP).** <https://github.com/llm-y/instruction/archive/refs/heads/main.zip>
+
 ## Konsep Umum: File *Instruction* untuk AI
 
 ***Instruction*** adalah file teks berisi instruksi, konteks, dan aturan project yang **selalu disertakan (di-inject) ke dalam setiap prompt** yang dikirim ke AI. Salah satu contoh implementasinya adalah `CLAUDE.md` di Claude Code. Konsep ini tidak terikat pada satu AI tertentu; setiap AI coding assistant punya nama filenya sendiri, tapi cara kerjanya sama:

@@ -17,6 +17,14 @@ bagian yang ditandai `{...}`.
 | Proposal penelitian / disertasi / tesis | `README.md` + [`proposal.md`](proposal.md) |
 | Laporan penelitian / teknis | `README.md` + [`laporan.md`](laporan.md); tambah [`journal.md`](journal.md) bila laporan akan diangkat jadi artikel |
 
+> **Diakses via web?** Bila pengguna hanya memberi AI tautan halaman ini
+> (mis. "gunakan instruksi ini https://ll.my.id/instruction/manuscript/"),
+> ketahui ini adalah **core**. AI **wajib mengambil juga SATU overlay** dari
+> tabel di atas sesuai jenis naskah (tanya pengguna bila ragu) sebelum
+> menerapkan aturan. Versi mentah tiap file untuk di-`curl`/fetch:
+> `https://raw.githubusercontent.com/llm-y/instruction/main/manuscript/<file>`
+> (mis. `journal.md`).
+
 ---
 
 ## 1. Integritas sitasi & bibliografi (WAJIB)

@@ -16,6 +16,11 @@ tambahkan overlay bila jenis pipeline-nya cocok.
 | Sistem agentic umum | `README.md` saja |
 | Pipeline SLR (systematic literature review) | `README.md` + [`slr.md`](slr.md) |
 
+> **Diakses via web?** Bila pengguna hanya memberi AI tautan halaman ini,
+> ini adalah **core**; tambahkan overlay `slr.md` bila pipeline-nya SLR.
+> Versi mentah untuk di-`curl`/fetch:
+> `https://raw.githubusercontent.com/llm-y/instruction/main/agentic/<file>`.
+
 ---
 
 ## 1. Empat invariant arsitektur (WAJIB untuk fitur yang menyentuh keputusan penting)
