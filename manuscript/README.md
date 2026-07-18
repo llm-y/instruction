@@ -323,12 +323,28 @@ bagian yang ditandai `{...}`.
 
 ## 7. Teknis LaTeX (WAJIB untuk naskah LaTeX)
 
-> **Prasyarat — pastikan LaTeX terpasang sebelum build.** Bila perintah build
-> (`latexmk`/`pdflatex`) tidak tersedia, JANGAN gagal diam-diam: pandu
-> pengguna memasang distribusi LaTeX sesuai OS (TeX Live untuk Linux/macOS,
-> MiKTeX untuk Windows, atau TinyTeX yang ringan lintas-OS), lalu verifikasi
-> `pdflatex --version` sebelum lanjut. Bila memakai template penerbit dengan
-> toolchain khusus, ikuti overlay-nya (mis. `buku/template-bukupedia.md` T0).
+**Prasyarat — pasang LaTeX sebelum build; distribusi baku repo ini: TinyTeX.**
+TinyTeX adalah TeX Live minimal: ringan & hemat storage, paket ditambah
+sedikit-sedikit lewat `tlmgr` sesuai kebutuhan (bukan mengunduh distribusi
+penuh berukuran GB). Bila `pdflatex` belum ada, pasang dulu — JANGAN gagal
+diam-diam — lewat salah satu jalur, lalu verifikasi `pdflatex --version`:
+
+```r
+# via R (mis. pengguna RStudio)
+install.packages('tinytex'); tinytex::install_tinytex()
+```
+```bash
+# tanpa R (installer native)
+# Linux/macOS:
+wget -qO- "https://tinytex.yihui.org/install-bin-unix.sh" | sh
+# Windows: unduh & jalankan install-bin-windows.bat dari
+#          github.com/rstudio/tinytex-releases (butuh PowerShell)
+```
+
+**Tambah paket hanya saat dibutuhkan:** `tlmgr install <paket>` (mis.
+`tlmgr install booktabs siunitx`); mutakhirkan dengan
+`tlmgr update --self --all`. Template penerbit dengan set paket/alur khusus:
+ikuti overlay-nya (mis. `buku/template-bukupedia.md` T0).
 
 1. **Build bersih menyeluruh, bukan hanya sitasi:** jalankan siklus build
    penuh sampai stabil (`latexmk -pdf`, atau `pdflatex` + `bibtex` +

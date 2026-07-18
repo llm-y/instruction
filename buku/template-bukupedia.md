@@ -10,32 +10,22 @@ Sumber template: `universitas.bukupedia.co.id/template`.
 
 ---
 
-## T0. Prasyarat: instalasi LaTeX (toolchain Bukupedia) (WAJIB sebelum build)
+## T0. Prasyarat: instalasi LaTeX (WAJIB sebelum build)
 
-> Bila LaTeX belum terpasang, **pasang dulu sebelum menyusun/kompilasi** —
-> jangan biarkan build gagal diam-diam. Ini toolchain yang dipakai template
-> Bukupedia; untuk naskah non-Bukupedia, distro umum (TeX Live/MiKTeX) juga
-> cukup (core `manuscript/README.md` Bagian 7).
+> **Cara pasang LaTeX mengikuti standar core** (`manuscript/README.md`
+> Bagian 7): **TinyTeX + `tlmgr`** (R atau installer native). Bagian ini
+> hanya menambah paket & alur yang spesifik template Bukupedia.
 
-1. **Pasang TinyTeX via R** (distribusi TeX Live ringan):
-   ```r
-   install.packages('tinytex')
-   tinytex::install_tinytex()
-   ```
-2. **Verifikasi instalasi:**
-   ```r
-   tinytex::tinytex_root()
-   tinytex::tlmgr("--version")
-   ```
-3. **Pasang paket yang dibutuhkan template** (`tlmgr install <paket>`):
+1. **Paket yang dibutuhkan template Bukupedia** — pasang via
+   `tlmgr install <paket>` (menambah di atas TinyTeX minimal):
    ```
    inputenc fontenc mathptmx courier helvet amsmath babel geometry setspace
    titlesec graphicx hyperref booktabs array caption enumitem parskip fancyhdr
    tocloft tabularx longtable ragged2e biblatex bibtex logreq xstring
    ```
-4. **Kompilasi** lewat skrip `compile-latex.ps1` (menjalankan `pdflatex` →
+2. **Kompilasi** lewat skrip `compile-latex.ps1` (menjalankan `pdflatex` →
    `bibtex` → `pdflatex` ×2); berkas utama `bukped.tex` → keluaran `bukped.pdf`.
-5. **Editor & alat pendukung (opsional):** VS Code + ekstensi `vscode-pdf`,
+3. **Editor & alat pendukung (opsional):** VS Code + ekstensi `vscode-pdf`,
    serta Git/GitHub untuk kontrol versi.
 
 ## T1. Ukuran halaman & margin (WAJIB — jangan diubah)
