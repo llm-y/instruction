@@ -15,6 +15,13 @@ AI lain) di project pengguna. Konsepnya dijelaskan di `README.md` root.
    naik ke core; overlay hanya berisi yang spesifik sub-jenis, dan merujuk
    core dengan nomor bagiannya (mis. "core Bagian 3"). Bila mengubah nomor
    bagian di core, perbarui semua rujukan di overlay.
+2b. **Komposisi lintas-folder (bila dua task ortogonal).** Bila satu naskah
+   memerlukan dua folder pada sumbu berbeda (mis. `buku/` = produksi/format
+   buku, `manuscript/` = integritas isi ilmiah), folder yang lebih spesifik
+   **merujuk** folder lain via path relatif (`../manuscript/README.md
+   Bagian N`) alih-alih menyalin aturannya. Ini komposisi sah, bukan
+   pengecualian — tetap berlaku aturan "jangan duplikasi". Batasi hanya untuk
+   task yang benar-benar ortogonal (satu tak menggantikan yang lain).
 3. **Instruction harus generik & portabel:** dilarang path absolut mesin
    lokal, kredensial, email, atau nama project pribadi. Nilai yang harus
    diisi pengguna ditulis sebagai placeholder `{...}` (mis. `{email-anda}`).
