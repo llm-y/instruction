@@ -5,6 +5,11 @@ Kumpulan file *instruction* untuk task tertentu. Satu folder = satu task.
 Isi folder siap disalin/digabung menjadi `CLAUDE.md` (atau file instruction
 AI lain) di project pengguna. Konsepnya dijelaskan di `README.md` root.
 
+Repo ini juga dipublikasikan sebagai situs via **GitHub Pages** di
+**https://ll.my.id/instruction/**. Di sana `README.md` tiap folder menjadi
+halaman indeks direktori itu (dibuka seperti `index.html`), jadi jaga agar
+`README.md` bisa berdiri sebagai halaman depan yang wajar.
+
 ## Struktur & konvensi
 1. **Satu folder per task.** `README.md` di dalam folder = instruction inti
    (core) yang universal untuk task itu. Variasi per sub-jenis ditulis
@@ -31,6 +36,15 @@ AI lain) di project pengguna. Konsepnya dijelaskan di `README.md` root.
    menyatakan selesai.
 5. **Sumber saripati dicatat** di footer file (dari CLAUDE.md repo mana
    aturan didistilasi), tanpa menyalin detail spesifik project sumber.
+6. **Link antar-file pakai path relatif ke `.md`, bukan `.html` atau URL
+   absolut.** Repo dibaca di dua tempat — GitHub (tampilan repo) DAN GitHub
+   Pages (`ll.my.id/instruction`). GitHub Pages (Jekyll: `jekyll-relative-links`
+   + `jekyll-readme-index`) otomatis me-rewrite link relatif `.md`: mis.
+   `manuscript/README.md` → `/instruction/manuscript/`, `journal.md` →
+   `journal.html`, `../README.md` → `/instruction/`. Satu bentuk link `.md`
+   yang sama sudah benar di KEDUA konteks (terverifikasi di situs Pages) —
+   jangan hardcode `.html` atau URL absolut, dan pastikan file target
+   memang ada agar rewrite tidak gagal.
 
 ## Saat menambah/mengubah instruction
 - Folder baru → tambahkan barisnya di tabel "Daftar Instruction" di
