@@ -29,7 +29,7 @@ hanya menambah yang spesifik capstone.
 | Proyek | Waktu | Profil target | Bukti yang WAJIB tampak di laporan |
 |--------|-------|---------------|------------------------------------|
 | **Proyek 1** | Akhir tahun ke-1 | **Debugger** | Menemukan & menyelesaikan bug nyata; menguasai perkakas & alur pengembangan dasar: SCM (Git/GitHub), workflow (branch/PR/issue), CI/CD, *vibe coding* (pengembangan berbantuan AI), dan keterampilan teknis dasar minimal setara lulusan SMK RPL. |
-| **Proyek 2** | Akhir tahun ke-2 | *{profil tahun ke-2 — lengkapi}* | *{bukti wajib — lengkapi}* |
+| **Proyek 2** | Akhir tahun ke-2 | **Software Engineer** | Membangun **fitur lengkap end-to-end** (kebutuhan → desain → implementasi → integrasi) **beserta pengujiannya** (uji unit/integrasi yang ditulis sendiri, hasil & cakupan, CI menjalankan test otomatis), di atas fondasi perkakas Proyek 1. |
 | **Proyek 3** | Akhir tahun ke-3 | *{profil tahun ke-3 — lengkapi}* | *{bukti wajib — lengkapi}* |
 
 1. **Proyek 1 (Debugger) — laporan WAJIB membuktikan debugging nyata:** ada
@@ -48,7 +48,19 @@ hanya menambah yang spesifik capstone.
 3. **Standar minimal setara SMK RPL:** kompetensi teknis dasar (pemrograman,
    struktur data dasar, pemakaian tool) dianggap prasyarat dan harus terlihat
    terpenuhi; capstone menaikkannya ke konteks proyek nyata.
-4. **Catatan gaya:** *vibe coding* boleh untuk membangun PRODUK, tetapi
+4. **Proyek 2 (Software Engineer) — laporan WAJIB membuktikan pembangunan
+   fitur lengkap BESERTA pengujiannya**, bukan sekadar memperbaiki bug (itu
+   Proyek 1). Yang wajib tampak:
+   - **Fitur lengkap end-to-end:** kebutuhan → desain → implementasi →
+     integrasi, berfungsi sesuai requirement (C3).
+   - **Pengujian yang ditulis mahasiswa:** uji unit dan/atau integrasi dengan
+     kode uji nyata, hasil eksekusi (lolos/gagal), dan **cakupan (coverage)**
+     bila diukur — bukan hanya uji manual sekali jalan.
+   - **CI menjalankan uji otomatis:** pipeline (dari Proyek 1) kini menjalankan
+     *test suite* tiap perubahan; sertakan bukti (log/badge).
+   - **Kualitas rekayasa:** kode modular, mengikuti konvensi, dan (bila ada)
+     *code review* terlihat di PR.
+5. **Catatan gaya:** *vibe coding* boleh untuk membangun PRODUK, tetapi
    **prosa laporan tetap tunduk aturan de-AI** (core Bagian 4) dan istilah
    wajar Indonesia (core Bagian 5) — jangan menyerahkan teks mentah hasil AI.
 
@@ -132,7 +144,8 @@ hanya menambah yang spesifik capstone.
 
 - [ ] Proyek ke berapa (1/2/3) sudah ditentukan; **profil target tahun itu
       (C1) terbukti** di laporan (Proyek 1: debugging nyata + SCM/workflow/
-      CI-CD/vibe coding + dasar setara SMK RPL).
+      CI-CD/vibe coding + dasar SMK RPL; Proyek 2: fitur lengkap end-to-end +
+      pengujian ditulis sendiri + CI menjalankan test otomatis).
 - [ ] Format 100% sesuai template prodi (urutan bab, pengesahan pembimbing/
       penguji/mitra, gaya sitasi).
 - [ ] Masalah nyata & spesifik; requirement terukur; rumusan masalah → tujuan
