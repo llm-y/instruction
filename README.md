@@ -19,6 +19,7 @@ Bila pengguna hanya memberi tautan root ini tanpa memilih task — mis. *"sesuai
 | Artikel/naskah untuk **jurnal atau konferensi** (mis. `.tex`/`.docx` berstruktur IMRaD, ada abstrak & hasil) | `manuscript/README.md` + `manuscript/journal.md` |
 | **Proposal** penelitian / disertasi / tesis (bab 1–3, rencana, belum ada hasil) | `manuscript/README.md` + `manuscript/proposal.md` |
 | **Laporan** penelitian / akhir hibah / laporan teknis | `manuscript/README.md` + `manuscript/laporan.md` |
+| **Capstone project** mahasiswa vokasi (proyek terapan integratif, ada mitra/requirement/uji terima, sering tim) | `manuscript/README.md` + `manuscript/capstone.md` |
 | Naskah **buku ber-ISBN** (bab-bab buku, buku ajar, monograf, novel, antologi) | `buku/README.md` (+ `manuscript/README.md` bila ilmiah, + overlay template penerbit bila ada) |
 | **Kode aplikasi/agen berbasis LLM** (pipeline screening, ekstraksi, review, sintesis) | `agentic/README.md` (+ `agentic/slr.md` bila pipeline SLR) |
 
@@ -28,7 +29,7 @@ Detail tiap task ada di tabel **Daftar Instruction** berikut.
 
 | Folder | Task |
 |--------|------|
-| [`manuscript/`](manuscript/README.md) | Validasi integritas akademik penulisan ilmiah. Core universal ([`README.md`](manuscript/README.md)) + overlay per jenis naskah: [`journal.md`](manuscript/journal.md) untuk artikel jurnal bereputasi tinggi, [`proposal.md`](manuscript/proposal.md) untuk proposal penelitian/disertasi/tesis, [`laporan.md`](manuscript/laporan.md) untuk laporan penelitian/teknis. Pakai: core + satu overlay |
+| [`manuscript/`](manuscript/README.md) | Validasi integritas akademik penulisan ilmiah. Core universal ([`README.md`](manuscript/README.md)) + overlay per jenis naskah: [`journal.md`](manuscript/journal.md) untuk artikel jurnal bereputasi tinggi, [`proposal.md`](manuscript/proposal.md) untuk proposal penelitian/disertasi/tesis, [`laporan.md`](manuscript/laporan.md) untuk laporan penelitian/teknis, [`capstone.md`](manuscript/capstone.md) untuk laporan capstone project vokasi. Pakai: core + satu overlay |
 | [`buku/`](buku/README.md) | Penyusunan buku ber-ISBN (buku ajar, monograf, referensi, umum, sastra): kelayakan ISBN (min 60 halaman isi, edar publik, bukan modul/tugas/laporan mentah), struktur front/main/back matter, narasi buku, self-review LAYAK/TIDAK LAYAK. Overlay: [`template-bukupedia.md`](buku/template-bukupedia.md) (spesifikasi LaTeX penerbit). Non-fiksi ilmiah: gabungkan `manuscript/README.md` |
 | [`agentic/`](agentic/README.md) | Pembangunan sistem AI agentic: invariant HITL/xAI/neuro-symbolic/multi-tenant, reproducible error, UX operasi AI panjang, stabilitas protokol pipeline, debugging state-first, verifikasi deploy, model pengujian. Overlay: [`slr.md`](agentic/slr.md) untuk pipeline SLR (PRISMA) |
 

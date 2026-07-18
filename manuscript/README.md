@@ -16,6 +16,7 @@ bagian yang ditandai `{...}`.
 | Artikel jurnal / conference paper | `README.md` + [`journal.md`](journal.md) |
 | Proposal penelitian / disertasi / tesis | `README.md` + [`proposal.md`](proposal.md) |
 | Laporan penelitian / teknis | `README.md` + [`laporan.md`](laporan.md); tambah [`journal.md`](journal.md) bila laporan akan diangkat jadi artikel |
+| Laporan capstone project (vokasi D3/D4/Sarjana Terapan) | `README.md` + [`capstone.md`](capstone.md) |
 
 > **Diakses via web?** Bila pengguna hanya memberi AI tautan halaman ini
 > (mis. "gunakan instruksi ini https://ll.my.id/instruction/manuscript/"),
@@ -403,8 +404,8 @@ ikuti overlay-nya (mis. `buku/template-bukupedia.md` T0).
 - [ ] Teks di gambar/tabel konsisten dengan body text dan lolos aturan de-AI;
       tidak ada diagram hasil AI generatif.
 - [ ] Klaim tidak overclaim; antisipasi serangan reviewer/penguji tertulis.
-- [ ] Checklist overlay (`journal.md` / `proposal.md` / `laporan.md`) juga
-      sudah dicek.
+- [ ] Checklist overlay (`journal.md` / `proposal.md` / `laporan.md` /
+      `capstone.md`) juga sudah dicek.
 
 ---
 
