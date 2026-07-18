@@ -102,7 +102,41 @@ sana dan **tidak diduplikasi** di sini. Sesuaikan bagian bertanda `{...}`.
 4. **Figure & tabel:** ikuti `manuscript/README.md` Bagian 6, disesuaikan
    gaya tabel/caption template penerbit (mis. `template-bukupedia.md`).
 
-## 5. Review kelayakan mandiri (WAJIB sebelum menyatakan siap submit)
+## 5. Audit siap produksi — bersih dari sisa template & panduan (WAJIB sebelum cetak/submit)
+
+> Template penerbit dan draft awal meninggalkan teks panduan, contoh, dan
+> placeholder. Buku BELUM siap produksi selama jejak ini masih ada — ini
+> temuan paling memalukan bila sampai lolos ke buku tercetak.
+
+1. **Hapus semua kalimat panduan template per bab/subbab.** Cari dan buang
+   arahan bawaan template seperti "Bab ini menjelaskan...", "Tuliskan latar
+   belakang di sini", "Isi subbab ini dengan...", "[Judul Bab]", "Ganti teks
+   ini". Setiap bab/subbab WAJIB berisi konten nyata, bukan instruksi cara
+   menulisnya.
+2. **Bersihkan placeholder & teks contoh.** Tidak boleh tersisa: `{...}` yang
+   belum diisi, `[isi]`/`[TODO]`/`XXX`, *lorem ipsum*, boilerplate "Contoh:"
+   dari template, bab/gambar/tabel contoh bawaan, bio penulis dummy, dan foto
+   placeholder.
+3. **Halaman redaksi terisi nilai asli, bukan contoh template:** ISBN asli
+   (bukan "978-xxx"/kosong), nama penerbit, tahun, kota, pernyataan
+   kolaborasi bila ada. Placeholder metadata = tidak siap produksi.
+4. **Elemen auto-generate diregenerasi, bukan dummy template:** daftar isi,
+   daftar gambar/tabel, indeks, dan glosarium mencerminkan isi nyata dengan
+   nomor halaman benar — bukan entri contoh dari template.
+5. **Rujukan silang & penomoran sudah terselesaikan:** tidak ada "BAB X",
+   "Gambar X.X", "halaman XX", atau "lihat bab ..." yang menggantung; semua
+   nomor bab/section/gambar/tabel benar dan berurut (di LaTeX, 0 `\ref`
+   undefined — selaras `manuscript/README.md` Bagian 7).
+6. **Sisir dengan pencarian, jangan andalkan mata.** Untuk naskah teks/LaTeX,
+   grep pola penanda umum lalu pastikan **nol temuan**, mis.:
+   `grep -rniE "lorem ipsum|tuliskan di sini|isi bab|isi subbab|\[isi|\[TODO|XXX|978-x|placeholder|ganti teks|contoh judul"`.
+   Temuan yang ambigu **dilaporkan ke user**, jangan hapus membabi buta konten
+   asli yang kebetulan cocok pola.
+7. **Konsistensi akhir pasca-scrub:** setelah contoh dibuang, pastikan tidak
+   ada bab/subbab kosong menggantung, penomoran tetap berurut, dan daftar isi
+   masih cocok dengan isi.
+
+## 6. Review kelayakan mandiri (WAJIB sebelum menyatakan siap submit)
 
 1. **Jalankan self-review dan nyatakan status: LAYAK atau TIDAK LAYAK**,
    disertai analisis kriteria yang terpenuhi/tidak, catatan khusus, dan
@@ -111,7 +145,7 @@ sana dan **tidak diduplikasi** di sini. Sesuaikan bagian bertanda `{...}`.
    halaman isi", "masih berbentuk laporan skripsi", "sasaran komunitas
    terbatas") dan langkah konkret agar layak — jangan diloloskan diam-diam.
 
-## 6. Checklist buku ber-ISBN
+## 7. Checklist buku ber-ISBN
 
 - [ ] Isi ≥ 60 halaman (batang tubuh, di luar front/back matter); bukan
       kategori terlarang (modul internal, tugas mahasiswa, laporan mentah).
@@ -125,6 +159,10 @@ sana dan **tidak diduplikasi** di sini. Sesuaikan bagian bertanda `{...}`.
 - [ ] Hak cipta/atribusi gambar & kutipan beres (kredit gambar/daftar pustaka).
 - [ ] (Non-fiksi ilmiah) Gaya & integritas mengikuti `manuscript/README.md`
       Bagian 1–2 & 4–6; sitasi terverifikasi API; tanpa fabrikasi.
+- [ ] **Siap produksi:** nol kalimat panduan template per bab/subbab, nol
+      placeholder (`{...}`/`[isi]`/lorem ipsum/contoh bawaan), halaman redaksi
+      terisi nilai asli; daftar isi/indeks/glosarium diregenerasi; rujukan
+      silang & penomoran terselesaikan; sudah disisir via grep (nol temuan).
 - [ ] Self-review kelayakan dijalankan; status LAYAK/TIDAK LAYAK dinyatakan
       dengan alasan spesifik.
 - [ ] Checklist overlay template penerbit (bila dipakai) juga sudah dicek.

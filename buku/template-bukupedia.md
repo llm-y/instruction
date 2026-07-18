@@ -58,6 +58,10 @@ Sumber template: `universitas.bukupedia.co.id/template`.
    (foto rata kiri), sampul belakang.
 4. **Halaman redaksi WAJIB terisi benar** (ISBN, penerbit, tahun, pernyataan
    kolaborasi bila ada) — bukan placeholder template yang tertinggal.
+5. **Jalankan audit siap produksi** (core Bagian 5) terhadap sisa khas
+   template ini: prakata contoh, entri daftar isi/glosarium/indeks contoh,
+   teks bab contoh, dan drop cap pada paragraf dummy — semua harus diganti
+   isi nyata sebelum naskah diserahkan.
 
 ## T6. Checklist template Bukupedia
 
@@ -73,6 +77,9 @@ Sumber template: `universitas.bukupedia.co.id/template`.
       highlight.
 - [ ] Front/main/back matter lengkap; daftar pustaka gaya APA; halaman
       redaksi terisi benar (ISBN + metadata), tanpa placeholder tersisa.
+- [ ] Audit siap produksi (core Bagian 5) dijalankan: tak ada prakata/bab/
+      entri daftar-isi-glosarium-indeks contoh atau paragraf dummy dari
+      template Bukupedia yang tersisa.
 
 ---
 
