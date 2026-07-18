@@ -27,6 +27,7 @@ yang digabungkan dengan core saat dipakai.
 | OpenAI Codex CLI | `AGENTS.md` |
 | Qwen Code (Alibaba) | `QWEN.md`; `AGENTS.md` juga dibaca otomatis |
 | Kiro (AWS) | *steering files*: `.kiro/steering/*.md` (project) atau `~/.kiro/steering/` (global); `AGENTS.md` juga dibaca otomatis |
+| Google Antigravity (`agy` CLI) | `AGENTS.md` + `GEMINI.md` (root workspace); *rules* di `.agents/rules/*.md` (project) atau `~/.gemini/GEMINI.md` (global) |
 | Windsurf | `.windsurfrules` |
 
 Karena konsepnya sama untuk semua AI, dalam repo ini kita menyebutnya secara umum sebagai ***instruction*** saja.
@@ -125,6 +126,29 @@ Codex memuat `AGENTS.md` dari beberapa lokasi sekaligus (yang lebih spesifik men
 | `AGENTS.md` (subfolder) | dimuat saat Codex bekerja di folder tersebut |
 
 Karena `AGENTS.md` sudah menjadi standar bersama (dibaca juga oleh Kiro dan tool lain), satu file gabungan ini bisa dipakai lintas-tool tanpa menyalin ulang.
+
+### Contoh: Google Antigravity (`agy` CLI)
+
+[Antigravity](https://antigravity.google) milik Google membaca `AGENTS.md` (dan `GEMINI.md`) di root workspace — sama seperti Codex, jadi file `AGENTS.md` gabungan yang sama bisa langsung dipakai:
+
+```bash
+# dari root project Anda — gabung core + satu overlay jadi AGENTS.md
+cat path/ke/instruction/buku/README.md \
+    path/ke/instruction/buku/template-bukupedia.md > AGENTS.md
+
+# periksa file konteks yang benar-benar dimuat sebelum agent bekerja
+agy inspect
+```
+
+Sebagai alternatif khusus Antigravity, instruction bisa ditaruh sebagai *rules*:
+
+| Lokasi | Cakupan |
+|--------|---------|
+| `~/.gemini/GEMINI.md` | rules global, berlaku untuk semua project |
+| `.agents/rules/*.md` | rules khusus project ini (workspace) |
+| `AGENTS.md` (root workspace) | konteks project, standar lintas-tool |
+
+Perintah `agy inspect` menampilkan konfigurasi yang termuat (`.agents/`, `AGENTS.md`, instruksi project), berguna untuk memastikan instruction sudah terbaca.
 
 ## Apa itu CLAUDE.md?
 
