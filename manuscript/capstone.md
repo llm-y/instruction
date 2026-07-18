@@ -30,7 +30,7 @@ hanya menambah yang spesifik capstone.
 |--------|-------|---------------|------------------------------------|
 | **Proyek 1** | Akhir tahun ke-1 | **Debugger** | Menemukan & menyelesaikan bug nyata; menguasai perkakas & alur pengembangan dasar: SCM (Git/GitHub), workflow (branch/PR/issue), CI/CD, *vibe coding* (pengembangan berbantuan AI), dan keterampilan teknis dasar minimal setara lulusan SMK RPL. |
 | **Proyek 2** | Akhir tahun ke-2 | **Software Engineer** | Membangun **fitur lengkap end-to-end** (kebutuhan → desain → implementasi → integrasi) **beserta pengujiannya** (uji unit/integrasi yang ditulis sendiri, hasil & cakupan, CI menjalankan test otomatis), di atas fondasi perkakas Proyek 1. |
-| **Proyek 3** | Akhir tahun ke-3 | *{profil tahun ke-3 — lengkapi}* | *{bukti wajib — lengkapi}* |
+| **Proyek 3** | Akhir tahun ke-3 | **Software Architect** | Merancang **arsitektur sistem** (diagram, dekomposisi, trade-off berjustifikasi) + **integrasi antar-aplikasi via API** (REST/gRPC, kontrak/OpenAPI, komunikasi **Machine-to-Machine**) + **memimpin tim** (koordinasi, code review, integrasi kerja anggota), di atas fondasi Proyek 1 & 2. |
 
 1. **Proyek 1 (Debugger) — laporan WAJIB membuktikan debugging nyata:** ada
    kasus bug konkret dengan alur **gejala → reproduksi → diagnosis → akar
@@ -60,7 +60,22 @@ hanya menambah yang spesifik capstone.
      *test suite* tiap perubahan; sertakan bukti (log/badge).
    - **Kualitas rekayasa:** kode modular, mengikuti konvensi, dan (bila ada)
      *code review* terlihat di PR.
-5. **Catatan gaya:** *vibe coding* boleh untuk membangun PRODUK, tetapi
+5. **Proyek 3 (Software Architect) — laporan WAJIB membuktikan perancangan
+   sistem, integrasi antar-aplikasi, dan kepemimpinan tim.** Yang wajib tampak:
+   - **Arsitektur sistem:** diagram arsitektur/komponen, dekomposisi layanan,
+     dan **keputusan desain beserta trade-off-nya** yang dijustifikasi (core
+     Bagian 3) — di level sistem, bukan satu fitur (itu Proyek 2).
+   - **Integrasi antar-aplikasi via API:** rancang & implementasi API
+     (mis. REST/gRPC) dengan kontrak/spesifikasi (mis. OpenAPI), termasuk
+     komunikasi **Machine-to-Machine (M2M)** antar-layanan — autentikasi
+     antar-mesin (API key/OAuth client-credentials), penanganan error &
+     versioning.
+   - **Kepemimpinan tim:** bukti memimpin — pembagian & koordinasi tugas,
+     memimpin *code review*, mengintegrasikan kerja anggota, dan menjaga mutu
+     tim (bukan sekadar kontribusi kode individual, C3 poin 5).
+   - Dibangun di atas Proyek 1 (debugging) & Proyek 2 (fitur + pengujian):
+     sistem terintegrasi tetap teruji dan CI/CD tetap jalan.
+6. **Catatan gaya:** *vibe coding* boleh untuk membangun PRODUK, tetapi
    **prosa laporan tetap tunduk aturan de-AI** (core Bagian 4) dan istilah
    wajar Indonesia (core Bagian 5) — jangan menyerahkan teks mentah hasil AI.
 
@@ -145,7 +160,8 @@ hanya menambah yang spesifik capstone.
 - [ ] Proyek ke berapa (1/2/3) sudah ditentukan; **profil target tahun itu
       (C1) terbukti** di laporan (Proyek 1: debugging nyata + SCM/workflow/
       CI-CD/vibe coding + dasar SMK RPL; Proyek 2: fitur lengkap end-to-end +
-      pengujian ditulis sendiri + CI menjalankan test otomatis).
+      pengujian ditulis sendiri + CI menjalankan test otomatis; Proyek 3:
+      arsitektur sistem + integrasi API/M2M + memimpin tim).
 - [ ] Format 100% sesuai template prodi (urutan bab, pengesahan pembimbing/
       penguji/mitra, gaya sitasi).
 - [ ] Masalah nyata & spesifik; requirement terukur; rumusan masalah → tujuan
