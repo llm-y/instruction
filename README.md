@@ -10,7 +10,7 @@ yang digabungkan dengan core saat dipakai.
 
 | Folder | Task |
 |--------|------|
-| [`manuscript/`](manuscript/README.md) | Validasi integritas akademik penulisan ilmiah. Core universal ([`README.md`](manuscript/README.md)) + overlay per jenis naskah: [`journal.md`](manuscript/journal.md) untuk artikel jurnal bereputasi tinggi, [`proposal.md`](manuscript/proposal.md) untuk proposal penelitian/disertasi/tesis. Pakai: core + satu overlay |
+| [`manuscript/`](manuscript/README.md) | Validasi integritas akademik penulisan ilmiah. Core universal ([`README.md`](manuscript/README.md)) + overlay per jenis naskah: [`journal.md`](manuscript/journal.md) untuk artikel jurnal bereputasi tinggi, [`proposal.md`](manuscript/proposal.md) untuk proposal penelitian/disertasi/tesis, [`laporan.md`](manuscript/laporan.md) untuk laporan penelitian/teknis. Pakai: core + satu overlay |
 | [`agentic/`](agentic/README.md) | Pembangunan sistem AI agentic: invariant HITL/xAI/neuro-symbolic/multi-tenant, reproducible error, UX operasi AI panjang, stabilitas protokol pipeline, debugging state-first, verifikasi deploy, model pengujian. Overlay: [`slr.md`](agentic/slr.md) untuk pipeline SLR (PRISMA) |
 
 ## Konsep Umum: File *Instruction* untuk AI
@@ -24,6 +24,7 @@ yang digabungkan dengan core saat dipakai.
 | Cursor | `.cursorrules` / `.cursor/rules/` |
 | Gemini CLI (Google) | `GEMINI.md` |
 | OpenAI Codex CLI | `AGENTS.md` |
+| Qwen Code (Alibaba) | `QWEN.md`; `AGENTS.md` juga dibaca otomatis |
 | Kiro (AWS) | *steering files*: `.kiro/steering/*.md` (project) atau `~/.kiro/steering/` (global); `AGENTS.md` juga dibaca otomatis |
 | Windsurf | `.windsurfrules` |
 

@@ -12,7 +12,7 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
 |--------------|--------------------|
 | Artikel jurnal / conference paper | `README.md` + [`journal.md`](journal.md) |
 | Proposal penelitian / disertasi / tesis | `README.md` + [`proposal.md`](proposal.md) |
-| Laporan penelitian/teknis | `README.md` saja; tambah [`journal.md`](journal.md) bila laporan akan dipublikasikan |
+| Laporan penelitian / teknis | `README.md` + [`laporan.md`](laporan.md); tambah [`journal.md`](journal.md) bila laporan akan diangkat jadi artikel |
 
 ---
 
@@ -369,7 +369,8 @@ di repo naskah Anda. Sesuaikan bagian yang ditandai `{...}`.
 - [ ] Teks di gambar/tabel konsisten dengan body text dan lolos aturan de-AI;
       tidak ada diagram hasil AI generatif.
 - [ ] Klaim tidak overclaim; antisipasi serangan reviewer/penguji tertulis.
-- [ ] Checklist overlay (`journal.md` / `proposal.md`) juga sudah dicek.
+- [ ] Checklist overlay (`journal.md` / `proposal.md` / `laporan.md`) juga
+      sudah dicek.
 
 ---
 
