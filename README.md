@@ -106,6 +106,26 @@ fileMatchPattern: "**/*.tex"
 
 Alternatif: Kiro juga otomatis membaca `AGENTS.md` di root workspace, jadi menaruh gabungan instruction sebagai `AGENTS.md` juga berfungsi (sekaligus terbaca oleh tool lain yang mendukung standar `AGENTS.md`, seperti OpenAI Codex).
 
+### Contoh: OpenAI Codex CLI
+
+Di [Codex CLI](https://github.com/openai/codex) milik OpenAI, instruction ditaruh di file `AGENTS.md` yang dibaca otomatis dan **digabung berlapis** dari yang paling umum ke paling spesifik. Karena pola pakai repo ini adalah core + satu overlay, gabungkan keduanya menjadi satu `AGENTS.md`:
+
+```bash
+# dari root project Anda — gabung core + satu overlay jadi AGENTS.md
+cat path/ke/instruction/manuscript/README.md \
+    path/ke/instruction/manuscript/journal.md > AGENTS.md
+```
+
+Codex memuat `AGENTS.md` dari beberapa lokasi sekaligus (yang lebih spesifik menimpa yang umum):
+
+| Lokasi | Cakupan |
+|--------|---------|
+| `~/.codex/AGENTS.md` | global, berlaku untuk semua project |
+| `AGENTS.md` (root repo) | seluruh project, biasanya di-commit ke git |
+| `AGENTS.md` (subfolder) | dimuat saat Codex bekerja di folder tersebut |
+
+Karena `AGENTS.md` sudah menjadi standar bersama (dibaca juga oleh Kiro dan tool lain), satu file gabungan ini bisa dipakai lintas-tool tanpa menyalin ulang.
+
 ## Apa itu CLAUDE.md?
 
 `CLAUDE.md` adalah implementasi konsep instruction di atas pada **Claude Code**: file yang dibaca secara otomatis setiap kali memulai sesi di sebuah project. File ini berfungsi sebagai "memori project" — tempat menyimpan konteks dan aturan yang perlu diketahui Claude agar dapat bekerja sesuai dengan konvensi project tersebut.
